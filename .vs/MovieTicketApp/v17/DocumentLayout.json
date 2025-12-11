@@ -1,0 +1,2037 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\y4\\project1\\MovieTicketApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|d:\\y4\\project1\\movieticketapp\\staff\\staffchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:staff\\staffchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\staff\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:staff\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\staff\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:staff\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\staff\\staffchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:staff\\staffchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|d:\\y4\\project1\\movieticketapp\\user\\uc_hotro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_hotro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|d:\\y4\\project1\\movieticketapp\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_lichsu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_lichsu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_itemphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_itemphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_doan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_doan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|d:\\y4\\project1\\movieticketapp\\user\\uc_hotro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_hotro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\formmainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:formmainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\formmainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:formmainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|d:\\y4\\project1\\movieticketapp\\user\\uc_hotro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_hotro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_doan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_doan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\staff\\staffchat.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:staff\\staffchat.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\staff\\staff.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:staff\\staff.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\formmainadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:formmainadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\formmainadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:formmainadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\frmgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:frmgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\seatselectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:seatselectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\seatselectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:seatselectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\moviedetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:moviedetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_lichsu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_lichsu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_itemphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_itemphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_itemdoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_itemdoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLLichChieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Admin\\UC_QLLichChieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_qldoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:admin\\uc_qldoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_qlphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:admin\\uc_qlphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_qlphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:admin\\uc_qlphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_qlphim.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:admin\\uc_qlphim.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss\\bosshome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss\\bosshome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss\\bossdtfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss\\bossdtfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss\\bossdtmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss\\bossdtmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss\\bosstk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss\\bosstk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss\\bosstk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss\\bosstk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss\\bosstk.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss\\bosstk.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_xuatchieu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:admin\\uc_xuatchieu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\formmainadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:formmainadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_xuatchieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:admin\\uc_xuatchieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_qltaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:admin\\uc_qltaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_doan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_doan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_qldoan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:admin\\uc_qldoan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_qldoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:admin\\uc_qldoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss\\bosshome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss\\bosshome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss\\bossdtfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss\\bossdtfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss\\bossdtfood.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss\\bossdtfood.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss\\bossdtmovie.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss\\bossdtmovie.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss\\bossdtmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss\\bossdtmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss\\bosshome.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss\\bosshome.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\frmgiohang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:frmgiohang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_taikhoan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_taikhoan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_phim.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_phim.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\frmgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:frmgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\moviedetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:moviedetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_itemdoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_itemdoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\moderndatepicker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:moderndatepicker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\moderncalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:moderncalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_trangchuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:admin\\uc_trangchuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\seatselectionform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:seatselectionform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_lichsu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_lichsu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_itemdoan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_itemdoan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_trangchuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:admin\\uc_trangchuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_trangchuadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:admin\\uc_trangchuadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_itemphim.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_itemphim.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\formmainuser.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:formmainuser.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\moderncalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:moderncalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\moderndatepicker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:moderndatepicker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\moderncalendar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:moderncalendar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\moderndatepicker.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:moderndatepicker.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|D:\\y4\\project1\\MovieTicketApp\\user\\uc_trangchu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}|MovieTicketApp.csproj|solutionrelative:user\\uc_trangchu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\Staff.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Staff.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\Staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\BossdtMovie.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BossdtMovie.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\BossdtMovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BossdtMovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\Bossdtfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bossdtfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\Bossdtfood.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Bossdtfood.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\BossHome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BossHome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\BossHome.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BossHome.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\bosstk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bosstk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\bosshome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bosshome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\bossdtmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bossdtmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\bossdtfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bossdtfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_QLTaiKhoan.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_QLTaiKhoan.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\uc_phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:uc_phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_LichSu.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_LichSu.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_QLPhim.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_QLPhim.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\uc_qllichchieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:uc_qllichchieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_QLDoAn.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_QLDoAn.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_LichSu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_LichSu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_Phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_Phim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_DoAn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_DoAn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\uc_qlphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:uc_qlphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_QLPhim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_QLPhim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\uc_qltaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:uc_qltaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\uc_qlphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:uc_qlphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\uc_qldoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:uc_qldoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_ItemPhim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_ItemPhim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_ItemPhim.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_ItemPhim.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\uc_itemphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:uc_itemphim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_ItemDoAn.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_ItemDoAn.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_ItemDoAn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_ItemDoAn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\uc_itemdoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:uc_itemdoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_Phim.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_Phim.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\UC_DoAn.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UC_DoAn.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\uc_doan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:uc_doan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\uc_lichsu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:uc_lichsu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLLichChieu.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Admin\\UC_QLLichChieu.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\y4\\project1\\MovieTicketApp\\admin\\uc_qllichchieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\uc_qllichchieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 17,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T10:48:48.849Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FormMainAdmin.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\FormMainAdmin.cs",
+              "RelativeDocumentMoniker": "FormMainAdmin.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\FormMainAdmin.cs [Design]",
+              "RelativeToolTip": "FormMainAdmin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T03:53:12.965Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormMainUser.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\FormMainUser.cs",
+              "RelativeDocumentMoniker": "FormMainUser.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\FormMainUser.cs [Design]",
+              "RelativeToolTip": "FormMainUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T07:45:23.973Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChatMessage.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\ChatMessage.cs",
+              "RelativeDocumentMoniker": "ChatMessage.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\ChatMessage.cs",
+              "RelativeToolTip": "ChatMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T06:36:46.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UC_Hotro.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_Hotro.Designer.cs",
+              "RelativeDocumentMoniker": "User\\UC_Hotro.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_Hotro.Designer.cs",
+              "RelativeToolTip": "User\\UC_Hotro.Designer.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAIwE4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T05:00:57.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UC_Hotro.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_Hotro.cs",
+              "RelativeDocumentMoniker": "User\\UC_Hotro.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_Hotro.cs",
+              "RelativeToolTip": "User\\UC_Hotro.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwDQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T05:00:46.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UC_Hotro.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_Hotro.cs",
+              "RelativeDocumentMoniker": "User\\UC_Hotro.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_Hotro.cs [Design]",
+              "RelativeToolTip": "User\\UC_Hotro.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T04:54:08.759Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StaffChat.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Staff\\StaffChat.cs",
+              "RelativeDocumentMoniker": "Staff\\StaffChat.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Staff\\StaffChat.cs",
+              "RelativeToolTip": "Staff\\StaffChat.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAADgv6EAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T16:58:21.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UC_QLLichChieu.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLLichChieu.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_QLLichChieu.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLLichChieu.cs",
+              "RelativeToolTip": "Admin\\UC_QLLichChieu.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T19:06:44.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 123,
+              "Title": "UC_QLLichChieu.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLLichChieu.Designer.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_QLLichChieu.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLLichChieu.Designer.cs",
+              "RelativeToolTip": "Admin\\UC_QLLichChieu.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T19:05:22.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "Staff.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Staff.Designer.cs",
+              "RelativeDocumentMoniker": "Staff.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Staff.Designer.cs",
+              "RelativeToolTip": "Staff.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T08:13:12.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "Staff.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Staff.cs",
+              "RelativeDocumentMoniker": "Staff.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Staff.cs",
+              "RelativeToolTip": "Staff.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T08:13:09.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "BossdtMovie.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\BossdtMovie.Designer.cs",
+              "RelativeDocumentMoniker": "BossdtMovie.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\BossdtMovie.Designer.cs",
+              "RelativeToolTip": "BossdtMovie.Designer.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwIIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T17:45:26.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "BossdtMovie.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\BossdtMovie.cs",
+              "RelativeDocumentMoniker": "BossdtMovie.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\BossdtMovie.cs",
+              "RelativeToolTip": "BossdtMovie.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T18:08:49.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "Bossdtfood.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Bossdtfood.cs",
+              "RelativeDocumentMoniker": "Bossdtfood.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Bossdtfood.cs",
+              "RelativeToolTip": "Bossdtfood.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T17:50:42.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "Bossdtfood.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Bossdtfood.Designer.cs",
+              "RelativeDocumentMoniker": "Bossdtfood.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Bossdtfood.Designer.cs",
+              "RelativeToolTip": "Bossdtfood.Designer.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAqwDUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T17:46:42.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "BossHome.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\BossHome.cs",
+              "RelativeDocumentMoniker": "BossHome.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\BossHome.cs",
+              "RelativeToolTip": "BossHome.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T16:39:11.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "BossHome.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\BossHome.Designer.cs",
+              "RelativeDocumentMoniker": "BossHome.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\BossHome.Designer.cs",
+              "RelativeToolTip": "BossHome.Designer.cs",
+              "ViewState": "AgIAALcAAAAAAAAAAAAawMcAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T16:26:20.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "UC_QLTaiKhoan.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_QLTaiKhoan.Designer.cs",
+              "RelativeDocumentMoniker": "UC_QLTaiKhoan.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_QLTaiKhoan.Designer.cs",
+              "RelativeToolTip": "UC_QLTaiKhoan.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T07:31:55.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "UC_LichSu.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_LichSu.Designer.cs",
+              "RelativeDocumentMoniker": "UC_LichSu.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_LichSu.Designer.cs",
+              "RelativeToolTip": "UC_LichSu.Designer.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T13:35:54.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "UC_QLPhim.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_QLPhim.Designer.cs",
+              "RelativeDocumentMoniker": "UC_QLPhim.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_QLPhim.Designer.cs",
+              "RelativeToolTip": "UC_QLPhim.Designer.cs",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAAACQBAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T04:36:58.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 104,
+              "Title": "UC_QLDoAn.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_QLDoAn.Designer.cs",
+              "RelativeDocumentMoniker": "UC_QLDoAn.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_QLDoAn.Designer.cs",
+              "RelativeToolTip": "UC_QLDoAn.Designer.cs",
+              "ViewState": "AgIAAMcAAAAAAAAAAADwv+gAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T10:38:45.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 105,
+              "Title": "UC_LichSu.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_LichSu.cs",
+              "RelativeDocumentMoniker": "UC_LichSu.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_LichSu.cs",
+              "RelativeToolTip": "UC_LichSu.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T13:35:38.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 106,
+              "Title": "UC_Phim.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_Phim.cs",
+              "RelativeDocumentMoniker": "UC_Phim.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_Phim.cs",
+              "RelativeToolTip": "UC_Phim.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T06:14:10.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 107,
+              "Title": "UC_DoAn.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_DoAn.cs",
+              "RelativeDocumentMoniker": "UC_DoAn.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_DoAn.cs",
+              "RelativeToolTip": "UC_DoAn.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T05:32:31.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 109,
+              "Title": "UC_QLPhim.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_QLPhim.cs",
+              "RelativeDocumentMoniker": "UC_QLPhim.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_QLPhim.cs",
+              "RelativeToolTip": "UC_QLPhim.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T04:41:28.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 113,
+              "Title": "UC_ItemPhim.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_ItemPhim.cs",
+              "RelativeDocumentMoniker": "UC_ItemPhim.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_ItemPhim.cs",
+              "RelativeToolTip": "UC_ItemPhim.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T07:07:41.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 114,
+              "Title": "UC_ItemPhim.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_ItemPhim.Designer.cs",
+              "RelativeDocumentMoniker": "UC_ItemPhim.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_ItemPhim.Designer.cs",
+              "RelativeToolTip": "UC_ItemPhim.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T06:57:35.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 116,
+              "Title": "UC_ItemDoAn.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_ItemDoAn.Designer.cs",
+              "RelativeDocumentMoniker": "UC_ItemDoAn.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_ItemDoAn.Designer.cs",
+              "RelativeToolTip": "UC_ItemDoAn.Designer.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAuwBUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T06:31:29.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 117,
+              "Title": "UC_ItemDoAn.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_ItemDoAn.cs",
+              "RelativeDocumentMoniker": "UC_ItemDoAn.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_ItemDoAn.cs",
+              "RelativeToolTip": "UC_ItemDoAn.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T06:29:25.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 119,
+              "Title": "UC_Phim.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_Phim.Designer.cs",
+              "RelativeDocumentMoniker": "UC_Phim.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_Phim.Designer.cs",
+              "RelativeToolTip": "UC_Phim.Designer.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwHUAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T06:07:38.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 120,
+              "Title": "UC_DoAn.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_DoAn.Designer.cs",
+              "RelativeDocumentMoniker": "UC_DoAn.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_DoAn.Designer.cs",
+              "RelativeToolTip": "UC_DoAn.Designer.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwDkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T05:36:41.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "StaffChat.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Staff\\StaffChat.Designer.cs",
+              "RelativeDocumentMoniker": "Staff\\StaffChat.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Staff\\StaffChat.Designer.cs",
+              "RelativeToolTip": "Staff\\StaffChat.Designer.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAAGMAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T16:48:38.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StaffChat.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Staff\\StaffChat.cs",
+              "RelativeDocumentMoniker": "Staff\\StaffChat.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Staff\\StaffChat.cs [Design]",
+              "RelativeToolTip": "Staff\\StaffChat.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T16:48:22.46Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Staff.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Staff\\Staff.Designer.cs",
+              "RelativeDocumentMoniker": "Staff\\Staff.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Staff\\Staff.Designer.cs",
+              "RelativeToolTip": "Staff\\Staff.Designer.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAIwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T16:23:18.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SeatSelectionForm.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\SeatSelectionForm.cs",
+              "RelativeDocumentMoniker": "SeatSelectionForm.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\SeatSelectionForm.cs",
+              "RelativeToolTip": "SeatSelectionForm.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAADwv40AAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T05:52:36.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Chatbot.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Chatbot.cs",
+              "RelativeDocumentMoniker": "Chatbot.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Chatbot.cs [Design]",
+              "RelativeToolTip": "Chatbot.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:43:28.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "UC_QLPhim.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLPhim.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_QLPhim.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLPhim.cs",
+              "RelativeToolTip": "Admin\\UC_QLPhim.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T17:58:47.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Boss.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss.cs",
+              "RelativeDocumentMoniker": "Boss.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss.cs [Design]",
+              "RelativeToolTip": "Boss.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T07:14:09.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "UC_XuatChieu.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_XuatChieu.Designer.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_XuatChieu.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_XuatChieu.Designer.cs",
+              "RelativeToolTip": "Admin\\UC_XuatChieu.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T19:30:47.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "UC_QLDoAn.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLDoAn.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_QLDoAn.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLDoAn.cs",
+              "RelativeToolTip": "Admin\\UC_QLDoAn.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAqwIEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T18:06:51.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "UC_QLDoAn.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLDoAn.Designer.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_QLDoAn.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLDoAn.Designer.cs",
+              "RelativeToolTip": "Admin\\UC_QLDoAn.Designer.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAjwHoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T18:02:26.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Bosstk.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss\\Bosstk.cs",
+              "RelativeDocumentMoniker": "Boss\\Bosstk.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss\\Bosstk.cs",
+              "RelativeToolTip": "Boss\\Bosstk.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T17:12:52.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Bossdtfood.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss\\Bossdtfood.cs",
+              "RelativeDocumentMoniker": "Boss\\Bossdtfood.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss\\Bossdtfood.cs [Design]",
+              "RelativeToolTip": "Boss\\Bossdtfood.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T17:04:26.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Bossdtfood.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss\\Bossdtfood.cs",
+              "RelativeDocumentMoniker": "Boss\\Bossdtfood.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss\\Bossdtfood.cs",
+              "RelativeToolTip": "Boss\\Bossdtfood.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T21:37:01.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Bossdtfood.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss\\Bossdtfood.Designer.cs",
+              "RelativeDocumentMoniker": "Boss\\Bossdtfood.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss\\Bossdtfood.Designer.cs",
+              "RelativeToolTip": "Boss\\Bossdtfood.Designer.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAcwHEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T21:35:44.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "BossdtMovie.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss\\BossdtMovie.Designer.cs",
+              "RelativeDocumentMoniker": "Boss\\BossdtMovie.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss\\BossdtMovie.Designer.cs",
+              "RelativeToolTip": "Boss\\BossdtMovie.Designer.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T21:35:16.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "BossdtMovie.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss\\BossdtMovie.cs",
+              "RelativeDocumentMoniker": "Boss\\BossdtMovie.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss\\BossdtMovie.cs",
+              "RelativeToolTip": "Boss\\BossdtMovie.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T21:34:48.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "BossHome.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss\\BossHome.cs",
+              "RelativeDocumentMoniker": "Boss\\BossHome.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss\\BossHome.cs",
+              "RelativeToolTip": "Boss\\BossHome.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAkwCsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T21:34:30.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "BossHome.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss\\BossHome.Designer.cs",
+              "RelativeDocumentMoniker": "Boss\\BossHome.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss\\BossHome.Designer.cs",
+              "RelativeToolTip": "Boss\\BossHome.Designer.cs",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T21:34:04.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UC_TaiKhoan.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_TaiKhoan.cs",
+              "RelativeDocumentMoniker": "User\\UC_TaiKhoan.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_TaiKhoan.cs",
+              "RelativeToolTip": "User\\UC_TaiKhoan.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAwwFUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T13:39:08.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Bosstk.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss\\Bosstk.Designer.cs",
+              "RelativeDocumentMoniker": "Boss\\Bosstk.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss\\Bosstk.Designer.cs",
+              "RelativeToolTip": "Boss\\Bosstk.Designer.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAYwHsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T17:05:52.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Bosstk.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss\\Bosstk.cs",
+              "RelativeDocumentMoniker": "Boss\\Bosstk.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss\\Bosstk.cs [Design]",
+              "RelativeToolTip": "Boss\\Bosstk.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T17:05:44.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "BossHome.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss\\BossHome.cs",
+              "RelativeDocumentMoniker": "Boss\\BossHome.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss\\BossHome.cs [Design]",
+              "RelativeToolTip": "Boss\\BossHome.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T17:04:31.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "BossdtMovie.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss\\BossdtMovie.cs",
+              "RelativeDocumentMoniker": "Boss\\BossdtMovie.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss\\BossdtMovie.cs [Design]",
+              "RelativeToolTip": "Boss\\BossdtMovie.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T17:04:29.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Staff.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Staff\\Staff.cs",
+              "RelativeDocumentMoniker": "Staff\\Staff.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Staff\\Staff.cs",
+              "RelativeToolTip": "Staff\\Staff.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAApwCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T17:02:17.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UC_LichSu.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_LichSu.cs",
+              "RelativeDocumentMoniker": "User\\UC_LichSu.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_LichSu.cs",
+              "RelativeToolTip": "User\\UC_LichSu.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwFsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:12:49.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserInfo.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UserInfo.cs",
+              "RelativeDocumentMoniker": "UserInfo.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UserInfo.cs",
+              "RelativeToolTip": "UserInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T10:40:18.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SeatSelectionForm.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\SeatSelectionForm.cs",
+              "RelativeDocumentMoniker": "SeatSelectionForm.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\SeatSelectionForm.cs [Design]*",
+              "RelativeToolTip": "SeatSelectionForm.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T05:52:32.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UC_QLPhim.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLPhim.Designer.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_QLPhim.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLPhim.Designer.cs",
+              "RelativeToolTip": "Admin\\UC_QLPhim.Designer.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAAANcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T18:25:23.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UC_QLDoAn.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLDoAn.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_QLDoAn.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLDoAn.cs [Design]",
+              "RelativeToolTip": "Admin\\UC_QLDoAn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T18:24:58.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 124,
+              "Title": "UC_QLLichChieu.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLLichChieu.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_QLLichChieu.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLLichChieu.cs [Design]",
+              "RelativeToolTip": "Admin\\UC_QLLichChieu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T18:24:35.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "UC_QLPhim.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLPhim.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_QLPhim.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLPhim.cs [Design]",
+              "RelativeToolTip": "Admin\\UC_QLPhim.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T18:24:20.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "UC_XuatChieu.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_XuatChieu.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_XuatChieu.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_XuatChieu.cs [Design]",
+              "RelativeToolTip": "Admin\\UC_XuatChieu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T18:24:15.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "UC_QLTaiKhoan.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLTaiKhoan.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_QLTaiKhoan.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_QLTaiKhoan.cs [Design]",
+              "RelativeToolTip": "Admin\\UC_QLTaiKhoan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T18:24:14.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UC_Phim.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_Phim.cs",
+              "RelativeDocumentMoniker": "User\\UC_Phim.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_Phim.cs [Design]",
+              "RelativeToolTip": "User\\UC_Phim.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:04:57.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "DatabaseHelper.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\DatabaseHelper.cs",
+              "RelativeToolTip": "DatabaseHelper.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAADwv48AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T07:00:19.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UC_LichSu.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_LichSu.cs",
+              "RelativeDocumentMoniker": "User\\UC_LichSu.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_LichSu.cs [Design]",
+              "RelativeToolTip": "User\\UC_LichSu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:13:38.344Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "UC_LichSu.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_LichSu.Designer.cs",
+              "RelativeDocumentMoniker": "User\\UC_LichSu.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_LichSu.Designer.cs",
+              "RelativeToolTip": "User\\UC_LichSu.Designer.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAAAIgAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T09:35:05.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "MovieDetailForm.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\MovieDetailForm.cs",
+              "RelativeDocumentMoniker": "MovieDetailForm.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\MovieDetailForm.cs",
+              "RelativeToolTip": "MovieDetailForm.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAADwv1cAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T06:58:44.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MovieDetailForm.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\MovieDetailForm.cs",
+              "RelativeDocumentMoniker": "MovieDetailForm.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\MovieDetailForm.cs [Design]",
+              "RelativeToolTip": "MovieDetailForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T06:58:42.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "FrmGioHang.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\FrmGioHang.cs",
+              "RelativeDocumentMoniker": "FrmGioHang.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\FrmGioHang.cs",
+              "RelativeToolTip": "FrmGioHang.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAAALMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T15:33:52.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "UC_DoAn.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_DoAn.Designer.cs",
+              "RelativeDocumentMoniker": "User\\UC_DoAn.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_DoAn.Designer.cs",
+              "RelativeToolTip": "User\\UC_DoAn.Designer.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAYwDAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T15:34:51.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "FrmGioHang.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\FrmGioHang.Designer.cs",
+              "RelativeDocumentMoniker": "FrmGioHang.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\FrmGioHang.Designer.cs",
+              "RelativeToolTip": "FrmGioHang.Designer.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAowIcAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T15:33:07.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "FrmGioHang.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\FrmGioHang.cs",
+              "RelativeDocumentMoniker": "FrmGioHang.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\FrmGioHang.cs [Design]",
+              "RelativeToolTip": "FrmGioHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T15:32:57.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Staff.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Staff\\Staff.cs",
+              "RelativeDocumentMoniker": "Staff\\Staff.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Staff\\Staff.cs [Design]",
+              "RelativeToolTip": "Staff\\Staff.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T15:07:41.992Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "UC_ItemDoAn.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_ItemDoAn.cs",
+              "RelativeDocumentMoniker": "User\\UC_ItemDoAn.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_ItemDoAn.cs",
+              "RelativeToolTip": "User\\UC_ItemDoAn.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T15:04:14.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "UC_ItemDoAn.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_ItemDoAn.Designer.cs",
+              "RelativeDocumentMoniker": "User\\UC_ItemDoAn.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_ItemDoAn.Designer.cs",
+              "RelativeToolTip": "User\\UC_ItemDoAn.Designer.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAgwG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:59:58.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UC_DoAn.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_DoAn.cs",
+              "RelativeDocumentMoniker": "User\\UC_DoAn.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_DoAn.cs [Design]",
+              "RelativeToolTip": "User\\UC_DoAn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:55:22.89Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UC_ItemDoAn.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_ItemDoAn.cs",
+              "RelativeDocumentMoniker": "User\\UC_ItemDoAn.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_ItemDoAn.cs [Design]",
+              "RelativeToolTip": "User\\UC_ItemDoAn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:53:16.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "UC_Phim.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_Phim.Designer.cs",
+              "RelativeDocumentMoniker": "User\\UC_Phim.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_Phim.Designer.cs",
+              "RelativeToolTip": "User\\UC_Phim.Designer.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAhwCwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:14:12.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UC_DoAn.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_DoAn.cs",
+              "RelativeDocumentMoniker": "User\\UC_DoAn.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_DoAn.cs",
+              "RelativeToolTip": "User\\UC_DoAn.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAkwBQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:11:09.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UC_ItemPhim.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_ItemPhim.cs",
+              "RelativeDocumentMoniker": "User\\UC_ItemPhim.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_ItemPhim.cs",
+              "RelativeToolTip": "User\\UC_ItemPhim.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA5wCQAAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:12:00.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "UC_Phim.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_Phim.cs",
+              "RelativeDocumentMoniker": "User\\UC_Phim.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_Phim.cs",
+              "RelativeToolTip": "User\\UC_Phim.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAUwEAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:10:17.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "UC_ItemPhim.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_ItemPhim.Designer.cs",
+              "RelativeDocumentMoniker": "User\\UC_ItemPhim.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_ItemPhim.Designer.cs",
+              "RelativeToolTip": "User\\UC_ItemPhim.Designer.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAIwG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:05:04.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UC_ItemPhim.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_ItemPhim.cs",
+              "RelativeDocumentMoniker": "User\\UC_ItemPhim.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_ItemPhim.cs [Design]",
+              "RelativeToolTip": "User\\UC_ItemPhim.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T14:04:48.897Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:05:22.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "Staff.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Staff.cs",
+              "RelativeDocumentMoniker": "Staff.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Staff.cs [Design]",
+              "RelativeToolTip": "Staff.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T08:12:56.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "SeatSelectionForm.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\SeatSelectionForm.Designer.cs",
+              "RelativeDocumentMoniker": "SeatSelectionForm.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\SeatSelectionForm.Designer.cs",
+              "RelativeToolTip": "SeatSelectionForm.Designer.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T05:52:40.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "Bosstk.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Bosstk.cs",
+              "RelativeDocumentMoniker": "Bosstk.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Bosstk.cs [Design]",
+              "RelativeToolTip": "Bosstk.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T05:48:29.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "BossHome.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\BossHome.cs",
+              "RelativeDocumentMoniker": "BossHome.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\BossHome.cs [Design]",
+              "RelativeToolTip": "BossHome.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T07:35:05.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "BossdtMovie.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\BossdtMovie.cs",
+              "RelativeDocumentMoniker": "BossdtMovie.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\BossdtMovie.cs [Design]",
+              "RelativeToolTip": "BossdtMovie.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T07:34:33.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "Bossdtfood.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Bossdtfood.cs",
+              "RelativeDocumentMoniker": "Bossdtfood.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Bossdtfood.cs [Design]",
+              "RelativeToolTip": "Bossdtfood.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T07:34:05.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "Boss.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss.cs",
+              "RelativeDocumentMoniker": "Boss.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss.cs",
+              "RelativeToolTip": "Boss.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAqwDQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T07:18:01.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "UC_Phim.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_Phim.cs",
+              "RelativeDocumentMoniker": "UC_Phim.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_Phim.cs [Design]",
+              "RelativeToolTip": "UC_Phim.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:47:51.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "ModernDatePicker.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\ModernDatePicker.Designer.cs",
+              "RelativeDocumentMoniker": "ModernDatePicker.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\ModernDatePicker.Designer.cs",
+              "RelativeToolTip": "ModernDatePicker.Designer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCUAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T01:15:48.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "ModernCalendar.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\ModernCalendar.cs",
+              "RelativeDocumentMoniker": "ModernCalendar.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\ModernCalendar.cs",
+              "RelativeToolTip": "ModernCalendar.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:27:11.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "ModernCalendar.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\ModernCalendar.Designer.cs",
+              "RelativeDocumentMoniker": "ModernCalendar.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\ModernCalendar.Designer.cs",
+              "RelativeToolTip": "ModernCalendar.Designer.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T15:00:33.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "ModernCalendar.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\ModernCalendar.cs",
+              "RelativeDocumentMoniker": "ModernCalendar.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\ModernCalendar.cs [Design]",
+              "RelativeToolTip": "ModernCalendar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:27:02.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "ModernDatePicker.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\ModernDatePicker.cs",
+              "RelativeDocumentMoniker": "ModernDatePicker.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\ModernDatePicker.cs",
+              "RelativeToolTip": "ModernDatePicker.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAA0wFEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:25:13.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "ModernDatePicker.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\ModernDatePicker.cs",
+              "RelativeDocumentMoniker": "ModernDatePicker.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\ModernDatePicker.cs [Design]",
+              "RelativeToolTip": "ModernDatePicker.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:24:44.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Boss.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Boss.Designer.cs",
+              "RelativeDocumentMoniker": "Boss.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Boss.Designer.cs",
+              "RelativeToolTip": "Boss.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T07:14:21.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAkwEsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T07:22:58.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 103,
+              "Title": "UC_QLLichChieu.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_QLLichChieu.cs",
+              "RelativeDocumentMoniker": "UC_QLLichChieu.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_QLLichChieu.cs [Design]",
+              "RelativeToolTip": "UC_QLLichChieu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T04:03:15.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "UC_TrangChuAdmin.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_TrangChuAdmin.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_TrangChuAdmin.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_TrangChuAdmin.cs",
+              "RelativeToolTip": "Admin\\UC_TrangChuAdmin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T15:14:24.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "UC_TrangChuAdmin.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_TrangChuAdmin.Designer.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_TrangChuAdmin.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_TrangChuAdmin.Designer.cs",
+              "RelativeToolTip": "Admin\\UC_TrangChuAdmin.Designer.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwFUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T15:10:30.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UC_TaiKhoan.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_TaiKhoan.cs",
+              "RelativeDocumentMoniker": "User\\UC_TaiKhoan.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_TaiKhoan.cs [Design]",
+              "RelativeToolTip": "User\\UC_TaiKhoan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T02:55:10.404Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "UC_TaiKhoan.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_TaiKhoan.Designer.cs",
+              "RelativeDocumentMoniker": "User\\UC_TaiKhoan.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_TaiKhoan.Designer.cs",
+              "RelativeToolTip": "User\\UC_TaiKhoan.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T13:39:21.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "UC_TrangChu.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_TrangChu.cs",
+              "RelativeDocumentMoniker": "User\\UC_TrangChu.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_TrangChu.cs",
+              "RelativeToolTip": "User\\UC_TrangChu.cs",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAuwCIAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T09:16:06.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "UC_TrangChu.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_TrangChu.Designer.cs",
+              "RelativeDocumentMoniker": "User\\UC_TrangChu.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_TrangChu.Designer.cs",
+              "RelativeToolTip": "User\\UC_TrangChu.Designer.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwJYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T09:52:04.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 108,
+              "Title": "UC_QLPhim.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_QLPhim.cs",
+              "RelativeDocumentMoniker": "UC_QLPhim.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_QLPhim.cs [Design]",
+              "RelativeToolTip": "UC_QLPhim.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T04:02:55.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 110,
+              "Title": "UC_QLTaiKhoan.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_QLTaiKhoan.cs",
+              "RelativeDocumentMoniker": "UC_QLTaiKhoan.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_QLTaiKhoan.cs [Design]",
+              "RelativeToolTip": "UC_QLTaiKhoan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T04:04:26.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 111,
+              "Title": "UC_QLPhong.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_QLPhong.cs",
+              "RelativeDocumentMoniker": "UC_QLPhong.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_QLPhong.cs [Design]",
+              "RelativeToolTip": "UC_QLPhong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T04:04:04.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 112,
+              "Title": "UC_QLDoAn.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_QLDoAn.cs",
+              "RelativeDocumentMoniker": "UC_QLDoAn.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_QLDoAn.cs [Design]",
+              "RelativeToolTip": "UC_QLDoAn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T04:03:42.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "UC_TrangChuAdmin.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_TrangChuAdmin.cs",
+              "RelativeDocumentMoniker": "Admin\\UC_TrangChuAdmin.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Admin\\UC_TrangChuAdmin.cs [Design]",
+              "RelativeToolTip": "Admin\\UC_TrangChuAdmin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T04:02:26.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "FormMainAdmin.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\FormMainAdmin.cs",
+              "RelativeDocumentMoniker": "FormMainAdmin.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\FormMainAdmin.cs",
+              "RelativeToolTip": "FormMainAdmin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T03:59:56.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FormMainAdmin.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\FormMainAdmin.Designer.cs",
+              "RelativeDocumentMoniker": "FormMainAdmin.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\FormMainAdmin.Designer.cs",
+              "RelativeToolTip": "FormMainAdmin.Designer.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T03:53:46.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 115,
+              "Title": "UC_ItemPhim.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_ItemPhim.cs",
+              "RelativeDocumentMoniker": "UC_ItemPhim.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_ItemPhim.cs [Design]",
+              "RelativeToolTip": "UC_ItemPhim.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T06:57:22.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 118,
+              "Title": "UC_ItemDoAn.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_ItemDoAn.cs",
+              "RelativeDocumentMoniker": "UC_ItemDoAn.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_ItemDoAn.cs [Design]",
+              "RelativeToolTip": "UC_ItemDoAn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T06:29:01.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormMainUser.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\FormMainUser.cs",
+              "RelativeDocumentMoniker": "FormMainUser.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\FormMainUser.cs",
+              "RelativeToolTip": "FormMainUser.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAuwJIAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:50:18.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "FormMainUser.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\FormMainUser.Designer.cs",
+              "RelativeDocumentMoniker": "FormMainUser.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\FormMainUser.Designer.cs",
+              "RelativeToolTip": "FormMainUser.Designer.cs",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAIwBQBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:50:04.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:49:48.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 121,
+              "Title": "UC_DoAn.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_DoAn.cs",
+              "RelativeDocumentMoniker": "UC_DoAn.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_DoAn.cs [Design]",
+              "RelativeToolTip": "UC_DoAn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:48:17.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 122,
+              "Title": "UC_LichSu.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\UC_LichSu.cs",
+              "RelativeDocumentMoniker": "UC_LichSu.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\UC_LichSu.cs [Design]",
+              "RelativeToolTip": "UC_LichSu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:47:31.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UC_TrangChu.cs [Design]",
+              "DocumentMoniker": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_TrangChu.cs",
+              "RelativeDocumentMoniker": "User\\UC_TrangChu.cs",
+              "ToolTip": "D:\\y4\\project1\\MovieTicketApp\\User\\UC_TrangChu.cs [Design]",
+              "RelativeToolTip": "User\\UC_TrangChu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:47:06.431Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

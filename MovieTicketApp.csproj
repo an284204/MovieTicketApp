@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92F2C7BD-C8CF-40A2-A6DA-5F3A0CD2797E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MovieTicketApp</RootNamespace>
+    <AssemblyName>MovieTicketApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Encryption, Version=1.0.0.0, Culture=neutral, PublicKeyToken=816df355b41ce519, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.Encryption.2.2.0\lib\netstandard2.0\Newtonsoft.Json.Encryption.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.9.0\lib\net462\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Boss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boss.Designer.cs">
+      <DependentUpon>Boss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boss\Bossdtfood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Boss\Bossdtfood.Designer.cs">
+      <DependentUpon>Bossdtfood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boss\BossdtMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Boss\BossdtMovie.Designer.cs">
+      <DependentUpon>BossdtMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boss\BossHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Boss\BossHome.Designer.cs">
+      <DependentUpon>BossHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boss\Bosstk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Boss\Bosstk.Designer.cs">
+      <DependentUpon>Bosstk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chatbot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chatbot.Designer.cs">
+      <DependentUpon>Chatbot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChatMessage.cs" />
+    <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainAdmin.Designer.cs">
+      <DependentUpon>FormMainAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainUser.Designer.cs">
+      <DependentUpon>FormMainUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGioHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGioHang.Designer.cs">
+      <DependentUpon>FrmGioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModernCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModernCalendar.Designer.cs">
+      <DependentUpon>ModernCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModernDatePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModernDatePicker.Designer.cs">
+      <DependentUpon>ModernDatePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovieDetailForm.Designer.cs">
+      <DependentUpon>MovieDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeatSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatSelectionForm.Designer.cs">
+      <DependentUpon>SeatSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\StaffChat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Staff\StaffChat.Designer.cs">
+      <DependentUpon>StaffChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UC_Hotro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\UC_Hotro.Designer.cs">
+      <DependentUpon>UC_Hotro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="User\UC_DoAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\UC_DoAn.Designer.cs">
+      <DependentUpon>UC_DoAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UC_ItemDoAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\UC_ItemDoAn.Designer.cs">
+      <DependentUpon>UC_ItemDoAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UC_ItemPhim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\UC_ItemPhim.Designer.cs">
+      <DependentUpon>UC_ItemPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UC_LichSu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\UC_LichSu.Designer.cs">
+      <DependentUpon>UC_LichSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UC_Phim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\UC_Phim.Designer.cs">
+      <DependentUpon>UC_Phim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UC_QLDoAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UC_QLDoAn.Designer.cs">
+      <DependentUpon>UC_QLDoAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UC_QLPhim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UC_QLPhim.Designer.cs">
+      <DependentUpon>UC_QLPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UC_XuatChieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UC_XuatChieu.Designer.cs">
+      <DependentUpon>UC_XuatChieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UC_QLTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UC_QLTaiKhoan.Designer.cs">
+      <DependentUpon>UC_QLTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UC_TaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\UC_TaiKhoan.Designer.cs">
+      <DependentUpon>UC_TaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UC_TrangChu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\UC_TrangChu.Designer.cs">
+      <DependentUpon>UC_TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UC_TrangChuAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UC_TrangChuAdmin.Designer.cs">
+      <DependentUpon>UC_TrangChuAdmin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Boss.resx">
+      <DependentUpon>Boss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boss\Bossdtfood.resx">
+      <DependentUpon>Bossdtfood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boss\BossdtMovie.resx">
+      <DependentUpon>BossdtMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boss\BossHome.resx">
+      <DependentUpon>BossHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boss\Bosstk.resx">
+      <DependentUpon>Bosstk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chatbot.resx">
+      <DependentUpon>Chatbot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainAdmin.resx">
+      <DependentUpon>FormMainAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainUser.resx">
+      <DependentUpon>FormMainUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGioHang.resx">
+      <DependentUpon>FrmGioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModernCalendar.resx">
+      <DependentUpon>ModernCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModernDatePicker.resx">
+      <DependentUpon>ModernDatePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieDetailForm.resx">
+      <DependentUpon>MovieDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SeatSelectionForm.resx">
+      <DependentUpon>SeatSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\StaffChat.resx">
+      <DependentUpon>StaffChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UC_DoAn.resx">
+      <DependentUpon>UC_DoAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UC_Hotro.resx">
+      <DependentUpon>UC_Hotro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UC_ItemDoAn.resx">
+      <DependentUpon>UC_ItemDoAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UC_ItemPhim.resx">
+      <DependentUpon>UC_ItemPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UC_LichSu.resx">
+      <DependentUpon>UC_LichSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UC_Phim.resx">
+      <DependentUpon>UC_Phim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UC_QLDoAn.resx">
+      <DependentUpon>UC_QLDoAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UC_QLPhim.resx">
+      <DependentUpon>UC_QLPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UC_XuatChieu.resx">
+      <DependentUpon>UC_XuatChieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UC_TaiKhoan.resx">
+      <DependentUpon>UC_TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UC_TrangChu.resx">
+      <DependentUpon>UC_TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UC_TrangChuAdmin.resx">
+      <DependentUpon>UC_TrangChuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\Banner\banner1.jpg" />
+    <Content Include="Images\Banner\banner2.jpg" />
+    <Content Include="Images\Banner\banner3.jpg" />
+    <Content Include="Images\Banner\banner4.jpg" />
+    <Content Include="Images\Banner\banner5.jpg" />
+    <Content Include="Images\Banner\joker.jpg" />
+    <Content Include="Images\Foods\7p.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Foods\aqua.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Foods\boncha.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Foods\c2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Foods\cam.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Foods\coca.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Foods\lavie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Foods\ngo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Foods\pepsi.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Foods\tea.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\spiderman.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\avatar.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\avengers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\batman.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\bogia.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\connan.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\doraemon.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\dragonball.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\endgame.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\harrypotter.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\joker.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\matbiec.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\muado.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\naruto.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\nobita.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Foods\spri.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\titanic.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
