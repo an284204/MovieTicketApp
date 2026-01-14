@@ -15,25 +15,20 @@ namespace MovieTicketApp
             InitializeComponent();
         }
 
-      //  Xử lý khi bấm nút Gửi
         private async void btnSend_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtInput.Text))
             {
-                // Hiển thị tin nhắn người dùng
                 AddMessage(txtInput.Text, true);
 
-                // Gọi sang Python Flask API
                 string reply = await CallPythonBot(txtInput.Text);
 
-                // Hiển thị câu trả lời từ chatbot
                 AddMessage(reply, false);
 
                 txtInput.Clear();
             }
         }
 
-        // Hàm hiển thị tin nhắn dạng bubble
         private void AddMessage(string text, bool isUser)
         {
             Label bubble = new Label()
@@ -48,7 +43,6 @@ namespace MovieTicketApp
                 Font = new Font("Segoe UI", 9)
             };
 
-            // Panel chứa bubble để căn chỉnh trái/phải
             Panel container = new Panel()
             {
                 AutoSize = true,
@@ -56,7 +50,6 @@ namespace MovieTicketApp
                 Margin = new Padding(0)
             };
 
-            // Đặt vị trí bubble trong container
             if (isUser)
             {
                 bubble.Location = new Point(container.Width - bubble.PreferredWidth - 10, 0);
@@ -71,7 +64,6 @@ namespace MovieTicketApp
             chatPanel.ScrollControlIntoView(container);
         }
 
-        // Hàm gọi Flask API bên Python
         private async Task<string> CallPythonBot(string userMessage)
         {
             try
@@ -91,7 +83,7 @@ namespace MovieTicketApp
             }
             catch (Exception ex)
             {
-                return "❌ Lỗi kết nối chatbot: " + ex.Message;
+                return " Lỗi kết nối chatbot: " + ex.Message;
             }
         }
 

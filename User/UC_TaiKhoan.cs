@@ -18,10 +18,14 @@ namespace MovieTicketApp
         {
             if (currentUser != null)
             {
-                txtHoTen.Text = currentUser.HoTen;
                 txtEmail.Text = currentUser.Email;
+                txtHoTen.Text = currentUser.HoTen;
                 txtPhone.Text = currentUser.SoDienThoai;
-                txtNgaySinh.Text = currentUser.NgaySinh?.ToString();
+                
+                if (currentUser.NgaySinh.HasValue)
+                {
+                    txtNgaySinh.Text = currentUser.NgaySinh.Value.ToString("dd/MM/yyyy");
+                }
             }
         }
 
@@ -29,81 +33,86 @@ namespace MovieTicketApp
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtHoTen.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập họ và tên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtHoTen.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtPhone.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập số điện thoại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtPhone.Focus();
+                    return;
+                }
+
                 DatabaseHelper db = new DatabaseHelper();
-                DateTime NgaySinh;
-                DateTime.TryParse(txtNgaySinh.Text, out NgaySinh);
+                DateTime ngaySinh = DateTime.Now;
+                
+                if (!string.IsNullOrWhiteSpace(txtNgaySinh.Text))
+                {
+                    if (!DateTime.TryParseExact(txtNgaySinh.Text, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out ngaySinh))
+                    {
+                        MessageBox.Show("Ngày sinh không đúng định dạng (dd/MM/yyyy)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtNgaySinh.Focus();
+                        return;
+                    }
+                }
 
                 db.UpdateAccount(
                     currentUser.UserId,
-                    txtHoTen.Text,
-                    NgaySinh,
+                    txtHoTen.Text.Trim(),
+                    ngaySinh,
                     txtEmail.Text,
-                    txtPhone.Text,
+                    txtPhone.Text.Trim(),
                     null, // không đổi mật khẩu ở đây
                     currentUser.RoleId
                 );
 
-                MessageBox.Show("Cập nhật thông tin thành công!");
+                // Cập nhật lại thông tin currentUser
+                currentUser.HoTen = txtHoTen.Text.Trim();
+                currentUser.SoDienThoai = txtPhone.Text.Trim();
+                currentUser.NgaySinh = ngaySinh;
+
+                MessageBox.Show("Cập nhật thông tin thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi cập nhật: " + ex.Message);
+                MessageBox.Show("Lỗi khi cập nhật: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-            panelDoiMK.Visible = true;
-        }
-
-        private void btnXacNhanMK_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtMKCu.Text) || string.IsNullOrEmpty(txtMKMoi.Text) || string.IsNullOrEmpty(txtNhapLaiMK.Text))
+            using (var changePasswordForm = new ChangePasswordForm(currentUser))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin mật khẩu!");
-                return;
-            }
-
-            if (txtMKMoi.Text != txtNhapLaiMK.Text)
-            {
-                MessageBox.Show("Mật khẩu nhập lại không khớp!");
-                return;
-            }
-
-            try
-            {
-                DatabaseHelper db = new DatabaseHelper();
-                DateTime NgaySinh;
-                DateTime.TryParse(txtNgaySinh.Text, out NgaySinh);
-
-                db.UpdateAccount(
-                    currentUser.UserId,
-                    txtHoTen.Text,
-                    NgaySinh,
-                    txtEmail.Text,
-                    txtPhone.Text,
-                    txtMKMoi.Text, // cập nhật mật khẩu mới
-                    currentUser.RoleId
-                );
-
-                MessageBox.Show("Đổi mật khẩu thành công!");
-                panelDoiMK.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi đổi mật khẩu: " + ex.Message);
+                changePasswordForm.ShowDialog();
             }
         }
 
-        private void btnChangeAvatar_Click(object sender, EventArgs e)
+        private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            //OpenFileDialog ofd = new OpenFileDialog();
-            //ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;";
-            //if (ofd.ShowDialog() == DialogResult.OK)
-            //{
-            //    picAvatar.Image = System.Drawing.Image.FromFile(ofd.FileName);
-            //    // Nếu muốn lưu avatar vào DB thì thêm cột Avatar trong bảng Users
-            //}
+            DialogResult result = MessageBox.Show(
+                "Bạn có chắc chắn muốn đăng xuất?",
+                "Xác nhận đăng xuất",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                // Tìm form cha là FormMainUser và đóng nó
+                Form parentForm = this.FindForm();
+                if (parentForm != null)
+                {
+                    parentForm.Close();
+                    
+                    // Mở lại form đăng nhập
+                    LoginForm loginForm = new LoginForm();
+                    loginForm.Show();
+                }
+            }
         }
     }
 }

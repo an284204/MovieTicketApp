@@ -6,7 +6,7 @@ namespace MovieTicketApp
 {
     public partial class UC_Hotro : UserControl
     {
-        private readonly UserInfo currentUser;   // thông tin khách đăng nhập
+        private readonly UserInfo currentUser;   
         private readonly DatabaseHelper dataHelper = new DatabaseHelper();
 
         private Timer refreshTimer;
@@ -17,28 +17,25 @@ namespace MovieTicketApp
             currentUser = user;
             ReloadData();
 
-            // Khởi tạo timer
             refreshTimer = new Timer();
-            refreshTimer.Interval = 3000; // 3 giây
+            refreshTimer.Interval = 9000; 
             refreshTimer.Tick += RefreshTimer_Tick;
             refreshTimer.Start();
         }
 
         private void RefreshTimer_Tick(object sender, EventArgs e)
         {
-            ReloadData(); // load lại hội thoại của khách
+            ReloadData(); 
         }
 
         internal void ReloadData()
         {
             panelMessages.Controls.Clear();
 
-            // Lấy lịch sử tin nhắn từ DB (chat riêng + chat chung)
             var messages = dataHelper.GetMessagesWithCustomer(currentUser.UserId);
 
             foreach (var msg in messages)
             {
-                // Nếu người gửi là staff thì isStaff = true
                 bool isStaff = msg.SenderId != currentUser.UserId;
                 AddMessage(isStaff ? "Staff" : currentUser.HoTen, msg.Message, isStaff);
             }
@@ -50,10 +47,8 @@ namespace MovieTicketApp
             {
                 string message = txtMessage.Text;
 
-                // Khách gửi vào chat chung (ReceiverId = 14)
                 dataHelper.SaveMessage(currentUser.UserId, 14, message);
 
-                // Hiển thị ngay trên giao diện
                 AddMessage(currentUser.HoTen, message, false);
                 txtMessage.Clear();
             }
@@ -61,25 +56,96 @@ namespace MovieTicketApp
 
         private void AddMessage(string sender, string message, bool isStaff)
         {
-            Panel bubble = new Panel();
-            bubble.AutoSize = true;
-            bubble.MaximumSize = new Size(400, 0);
-            bubble.Padding = new Padding(10);
-            bubble.Margin = new Padding(8);
-            bubble.BackColor = isStaff ? Color.LightBlue : Color.LightGreen;
+            var container = new Panel
+            {
+                AutoSize = true,
+                Width = panelMessages.ClientSize.Width - 32,
+                Margin = new Padding(0, 0, 0, 14)
+            };
 
-            Label lbl = new Label();
-            lbl.Text = message;
-            lbl.AutoSize = true;
-            lbl.MaximumSize = new Size(380, 0);
-            lbl.Font = new Font("Segoe UI", 10);
-            lbl.ForeColor = Color.Black;
+            var row = new FlowLayoutPanel
+            {
+                AutoSize = true,
+                FlowDirection = isStaff ? FlowDirection.LeftToRight : FlowDirection.RightToLeft,
+                WrapContents = false,
+                BackColor = Color.Transparent,
+                Width = container.Width
+            };
 
-            bubble.Controls.Add(lbl);
-            bubble.Anchor = isStaff ? AnchorStyles.Left : AnchorStyles.Right;
+            var avatarStack = BuildAvatarStack(isStaff);
+            avatarStack.Margin = new Padding(0, 0, 12, 0);
 
-            panelMessages.Controls.Add(bubble);
-            panelMessages.ScrollControlIntoView(bubble);
+            var lblText = new Label
+            {
+                AutoSize = true,
+                MaximumSize = new Size(container.Width - 170, 0),
+                Text = message,
+                ForeColor = Color.White,
+                Font = new Font("Segoe UI", 10F),
+                BackColor = Color.Transparent
+            };
+
+            var bubble = new Guna.UI2.WinForms.Guna2Panel
+            {
+                AutoSize = true,
+                MaximumSize = new Size(container.Width - 170, 0),
+                BorderRadius = 14,
+                FillColor = isStaff ? Color.FromArgb(45, 45, 65) : Color.FromArgb(229, 9, 20),
+                Padding = new Padding(12, 10, 12, 10),
+                Margin = new Padding(0, 0, 12, 0)
+            };
+            bubble.Controls.Add(lblText);
+
+            row.Controls.Add(avatarStack);
+            row.Controls.Add(bubble);
+
+            container.Controls.Add(row);
+            panelMessages.Controls.Add(container);
+            panelMessages.ScrollControlIntoView(container);
+        }
+
+        private Control BuildAvatarStack(bool isStaff)
+        {
+            var stack = new Panel
+            {
+                Width = 90,
+                Height = 80
+            };
+
+            var nameLabel = new Label
+            {
+                Text = isStaff ? "Nhân viên" : "Bạn",
+                AutoSize = false,
+                Width = 90,
+                Height = 18,
+                TextAlign = ContentAlignment.MiddleCenter,
+                Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
+                ForeColor = Color.Gainsboro,
+                BackColor = Color.Transparent
+            };
+
+            var avatar = new Guna.UI2.WinForms.Guna2Panel
+            {
+                Size = new Size(52, 52),
+                BorderRadius = 26,
+                FillColor = isStaff ? Color.FromArgb(90, 160, 255) : Color.FromArgb(229, 9, 20),
+                Location = new Point((90 - 52) / 2, 22)
+            };
+
+            var avatarText = new Label
+            {
+                Dock = DockStyle.Fill,
+                Text = isStaff ? "CS" : "U",
+                TextAlign = ContentAlignment.MiddleCenter,
+                Font = new Font("Segoe UI", 10F, FontStyle.Bold),
+                ForeColor = Color.White,
+                BackColor = Color.Transparent
+            };
+
+            avatar.Controls.Add(avatarText);
+            stack.Controls.Add(nameLabel);
+            stack.Controls.Add(avatar);
+            return stack;
         }
     }
 }

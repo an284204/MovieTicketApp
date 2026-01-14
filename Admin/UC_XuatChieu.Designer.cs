@@ -69,7 +69,6 @@
             this.cbPhim.Name = "cbPhim";
             this.cbPhim.Size = new System.Drawing.Size(400, 36);
             this.cbPhim.TabIndex = 1;
-            this.cbPhim.SelectedIndexChanged += new System.EventHandler(this.cbPhim_SelectedIndexChanged);
             // 
             // cbDiaDiem
             // 
@@ -101,7 +100,6 @@
             this.cbPhong.Name = "cbPhong";
             this.cbPhong.Size = new System.Drawing.Size(200, 36);
             this.cbPhong.TabIndex = 5;
-            this.cbPhong.SelectedIndexChanged += new System.EventHandler(this.cbPhong_SelectedIndexChanged);
             // 
             // txtNgayChieu
             // 
@@ -116,7 +114,6 @@
             this.txtNgayChieu.SelectedText = "";
             this.txtNgayChieu.Size = new System.Drawing.Size(200, 36);
             this.txtNgayChieu.TabIndex = 7;
-            this.txtNgayChieu.TextChanged += new System.EventHandler(this.txtNgayChieu_TextChanged);
             // 
             // cbGioChieu
             // 
@@ -139,12 +136,13 @@
             "18:00",
             "19:00",
             "20:00",
-            "21:00"});
+            "21:00",
+            "22:00",
+            "23:00"});
             this.cbGioChieu.Location = new System.Drawing.Point(180, 180);
             this.cbGioChieu.Name = "cbGioChieu";
             this.cbGioChieu.Size = new System.Drawing.Size(200, 36);
             this.cbGioChieu.TabIndex = 9;
-            this.cbGioChieu.SelectedIndexChanged += new System.EventHandler(this.cbGioChieu_SelectedIndexChanged);
             // 
             // txtGiaVe
             // 
@@ -159,49 +157,49 @@
             this.txtGiaVe.SelectedText = "";
             this.txtGiaVe.Size = new System.Drawing.Size(200, 36);
             this.txtGiaVe.TabIndex = 11;
-            this.txtGiaVe.TextChanged += new System.EventHandler(this.txtGiaVe_TextChanged);
             // 
             // btnThem
             // 
-            this.btnThem.BorderRadius = 8;
-            this.btnThem.FillColor = System.Drawing.Color.GreenYellow;
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThem.BorderRadius = 10;
+            this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Location = new System.Drawing.Point(600, 20);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 36);
+            this.btnThem.Size = new System.Drawing.Size(110, 40);
             this.btnThem.TabIndex = 12;
-            this.btnThem.Text = "Thêm";
+            this.btnThem.Text = "➕ Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
-            this.btnSua.BorderRadius = 8;
-            this.btnSua.FillColor = System.Drawing.Color.Gold;
-            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.BorderRadius = 10;
+            this.btnSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.btnSua.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Location = new System.Drawing.Point(600, 70);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(100, 36);
+            this.btnSua.Size = new System.Drawing.Size(110, 40);
             this.btnSua.TabIndex = 13;
-            this.btnSua.Text = "Sửa";
+            this.btnSua.Text = "✏️ Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.BorderRadius = 8;
-            this.btnXoa.FillColor = System.Drawing.Color.Tomato;
-            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXoa.BorderRadius = 10;
+            this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Location = new System.Drawing.Point(600, 120);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(100, 36);
+            this.btnXoa.Size = new System.Drawing.Size(110, 40);
             this.btnXoa.TabIndex = 14;
-            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Text = "🗑️ Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // dgvLichChieu
             // 
+            Font = new System.Drawing.Font("Segoe UI", 12F);
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvLichChieu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -226,7 +224,7 @@
             this.dgvLichChieu.Name = "dgvLichChieu";
             this.dgvLichChieu.RowHeadersVisible = false;
             this.dgvLichChieu.RowHeadersWidth = 62;
-            this.dgvLichChieu.Size = new System.Drawing.Size(825, 320);
+            this.dgvLichChieu.Size = new System.Drawing.Size(960, 415);
             this.dgvLichChieu.TabIndex = 15;
             this.dgvLichChieu.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvLichChieu.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -253,7 +251,8 @@
             // 
             // lblPhim
             // 
-            this.lblPhim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhim.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.lblPhim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(35)))), ((int)(((byte)(48)))));
             this.lblPhim.Location = new System.Drawing.Point(15, 26);
             this.lblPhim.Name = "lblPhim";
             this.lblPhim.Size = new System.Drawing.Size(100, 30);
@@ -262,7 +261,8 @@
             // 
             // lblDiaDiem
             // 
-            this.lblDiaDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiaDiem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.lblDiaDiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(35)))), ((int)(((byte)(48)))));
             this.lblDiaDiem.Location = new System.Drawing.Point(15, 60);
             this.lblDiaDiem.Name = "lblDiaDiem";
             this.lblDiaDiem.Size = new System.Drawing.Size(150, 30);
@@ -271,7 +271,8 @@
             // 
             // lblPhong
             // 
-            this.lblPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhong.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.lblPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(35)))), ((int)(((byte)(48)))));
             this.lblPhong.Location = new System.Drawing.Point(20, 100);
             this.lblPhong.Name = "lblPhong";
             this.lblPhong.Size = new System.Drawing.Size(100, 30);
@@ -280,7 +281,8 @@
             // 
             // lblNgayChieu
             // 
-            this.lblNgayChieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayChieu.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.lblNgayChieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(35)))), ((int)(((byte)(48)))));
             this.lblNgayChieu.Location = new System.Drawing.Point(20, 140);
             this.lblNgayChieu.Name = "lblNgayChieu";
             this.lblNgayChieu.Size = new System.Drawing.Size(150, 30);
@@ -289,7 +291,8 @@
             // 
             // lblGioChieu
             // 
-            this.lblGioChieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGioChieu.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.lblGioChieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(35)))), ((int)(((byte)(48)))));
             this.lblGioChieu.Location = new System.Drawing.Point(20, 180);
             this.lblGioChieu.Name = "lblGioChieu";
             this.lblGioChieu.Size = new System.Drawing.Size(150, 30);
@@ -298,7 +301,8 @@
             // 
             // lblGiaVe
             // 
-            this.lblGiaVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaVe.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.lblGiaVe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(35)))), ((int)(((byte)(48)))));
             this.lblGiaVe.Location = new System.Drawing.Point(20, 220);
             this.lblGiaVe.Name = "lblGiaVe";
             this.lblGiaVe.Size = new System.Drawing.Size(150, 30);

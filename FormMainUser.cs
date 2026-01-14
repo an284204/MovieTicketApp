@@ -2,12 +2,15 @@
 using System.Linq;
 using System.Windows.Forms;
 using System.Drawing;
+using Guna.UI2.WinForms;
+using Guna.UI2.WinForms.Enums;
 
 namespace MovieTicketApp
 {
     public partial class FormMainUser : Form
     {
-        private Guna.UI2.WinForms.Guna2CircleButton btnChatBot;
+        private Guna2CircleButton btnChatBot;
+        private Guna2Button[] menuButtons;
         private UC_TrangChu homeUC; 
         private UC_Phim phimUC;
         private UC_DoAn doAnUC;
@@ -18,10 +21,14 @@ namespace MovieTicketApp
 
         private readonly UserInfo currentUser;
 
+        private readonly Color menuActiveColor = Color.FromArgb(229, 9, 20);
+        private readonly Color menuInactiveColor = Color.FromArgb(30, 30, 45);
+
         public FormMainUser(UserInfo userInfo)
         {
             InitializeComponent();
             currentUser = userInfo; 
+            ConfigureMenuButtons();
         }
 
         private void AddUserControl(UserControl uc)
@@ -34,7 +41,7 @@ namespace MovieTicketApp
 
         private void FormMainUser_Load(object sender, EventArgs e)
         {
-            homeUC = new UC_TrangChu();
+            homeUC = new UC_TrangChu(currentUser);
             phimUC = new UC_Phim(currentUser);
             doAnUC = new UC_DoAn(currentUser);
             lichSuUC = new UC_LichSu(currentUser);   
@@ -43,6 +50,7 @@ namespace MovieTicketApp
 
 
             AddUserControl(homeUC);
+            SetActiveButton(btnTrangChu);
 
             AddChatBotButton();
         }
@@ -51,18 +59,21 @@ namespace MovieTicketApp
         {
             AddUserControl(homeUC);
             btnChatBot.Visible = true;
+            SetActiveButton(btnTrangChu);
         }
 
         private void btnPhim_Click(object sender, EventArgs e)
         {
             AddUserControl(phimUC);
             btnChatBot.Visible = true;
+            SetActiveButton(btnPhim);
         }
 
         private void btnDoAn_Click(object sender, EventArgs e)
         {
             AddUserControl(doAnUC);
             btnChatBot.Visible = false;
+            SetActiveButton(btnDoAn);
         }
 
         private void btnLichSu_Click(object sender, EventArgs e)
@@ -70,12 +81,14 @@ namespace MovieTicketApp
             lichSuUC.ReloadData();
             AddUserControl(lichSuUC);
             btnChatBot.Visible = false;
+            SetActiveButton(btnLichSu);
         }
 
         private void btnQuanLyTK_Click(object sender, EventArgs e)
         {
             AddUserControl(taiKhoanUC);
             btnChatBot.Visible = false;
+            SetActiveButton(btnQuanLyTK);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -96,13 +109,14 @@ namespace MovieTicketApp
             btnChatBot = new Guna.UI2.WinForms.Guna2CircleButton()
             {
                 Size = new Size(60, 60),
-                FillColor = Color.OrangeRed,
+                FillColor = Color.FromArgb(229, 9, 20),
+                Font = new Font("Segoe UI", 18F, FontStyle.Bold),
+                ForeColor = Color.White,
+                Text = "💬",
                 ImageSize = new Size(28, 28),
                 BorderThickness = 0,
                 Cursor = Cursors.Hand,
-                ShadowDecoration = { Enabled = false },
-                //ShadowDecoration = { Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle },
-                //Image = Properties.Resources.chatbot // icon của bạn
+                ShadowDecoration = { Enabled = true, Depth = 15, Color = Color.FromArgb(100, 0, 0, 0) },
             };
 
             btnChatBot.Click += BtnChatBot_Click;
@@ -131,6 +145,7 @@ namespace MovieTicketApp
         private void picLogo_Click(object sender, EventArgs e)
         {
             AddUserControl(homeUC);
+            SetActiveButton(btnTrangChu);
         }
 
 
@@ -164,6 +179,52 @@ namespace MovieTicketApp
             hoTroUC.ReloadData();
             AddUserControl(hoTroUC);
             btnChatBot.Visible = false;
+            SetActiveButton(btnHotro);
+        }
+
+        private void ConfigureMenuButtons()
+        {
+            menuButtons = new[]
+            {
+                btnTrangChu,
+                btnPhim,
+                btnDoAn,
+                btnLichSu,
+                btnQuanLyTK,
+                btnHotro
+            };
+
+            foreach (var btn in menuButtons)
+            {
+                if (btn == null)
+                {
+                    continue;
+                }
+
+                btn.ButtonMode = ButtonMode.RadioButton;
+                btn.FillColor = menuInactiveColor;
+                btn.HoverState.FillColor = Color.FromArgb(200, 20, 35);
+                btn.CheckedState.FillColor = menuActiveColor;
+                btn.CheckedState.ForeColor = Color.White;
+                btn.CheckedState.CustomBorderColor = menuActiveColor;
+                btn.TextAlign = HorizontalAlignment.Left;
+                btn.Padding = new Padding(4, 0, 0, 0);
+            }
+
+            if (btnTrangChu != null)
+            {
+                btnTrangChu.Checked = true;
+            }
+        }
+
+        private void SetActiveButton(Guna2Button targetButton)
+        {
+            if (targetButton == null)
+            {
+                return;
+            }
+
+            targetButton.Checked = true;
         }
     }
 }

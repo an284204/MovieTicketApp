@@ -19,6 +19,7 @@ namespace MovieTicketApp
         {
             InitializeComponent();
             currentUser = user;
+            SetupHoverEffects();
         }
 
         public string Description { get; set; }
@@ -33,9 +34,16 @@ namespace MovieTicketApp
 
         private void btnDatVe_Click(object sender, EventArgs e)
         {
-            // mở form với suất chiếu tương ứng và user hiện tại
-            SeatSelectionForm seatSelectionForm = new SeatSelectionForm(this.ShowTimeId, currentUser.UserId);
-            seatSelectionForm.ShowDialog();
+            // Hiện MovieDetailForm trước để chọn suất chiếu
+            MovieDetailForm detailForm = new MovieDetailForm(
+                lblTenPhim.Text,
+                lblThoiLuong.Text.Replace("⏱ ", ""),
+                this.Description,
+                this.Genre,
+                this.PosterFile,
+                currentUser
+            );
+            detailForm.ShowDialog();
         }
 
         public void SetData(string tenPhim, string thoiLuong, string posterFile, int showTimeId)
@@ -54,7 +62,7 @@ namespace MovieTicketApp
             else
             {
                 picPoster.Image = null;
-                picPoster.BackColor = Color.LightGray;
+                picPoster.BackColor = Color.FromArgb(60, 60, 80);
             }
         }
 
@@ -72,14 +80,29 @@ namespace MovieTicketApp
         private void picPoster_Click(object sender, EventArgs e)
         {
             MovieDetailForm detailForm = new MovieDetailForm(
-            lblTenPhim.Text,
-            lblThoiLuong.Text.Replace("⏱ ", ""), // bỏ icon nếu cần
-             this.Description,
-              this.Genre,
-              this.PosterFile
-   );
+                lblTenPhim.Text,
+                lblThoiLuong.Text.Replace("⏱ ", ""), // bỏ icon nếu cần
+                this.Description,
+                this.Genre,
+                this.PosterFile,
+                currentUser
+            );
             detailForm.ShowDialog();
 
+        }
+
+        private void SetupHoverEffects()
+        {
+            panelItem.MouseEnter += (s, e) =>
+            {
+                panelItem.FillColor = Color.FromArgb(40, 40, 60);
+                panelItem.ShadowDecoration.Depth = 30;
+            };
+            panelItem.MouseLeave += (s, e) =>
+            {
+                panelItem.FillColor = Color.FromArgb(30, 30, 45);
+                panelItem.ShadowDecoration.Depth = 20;
+            };
         }
     }
 }

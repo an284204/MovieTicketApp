@@ -21,11 +21,19 @@ namespace MovieTicketApp
         public string Genre { get; set; }
         public string PosterFile { get; set; }
 
-        private void UC_Phim_Load(object sender, EventArgs e)
+        private async void UC_Phim_Load(object sender, EventArgs e)
         {
             SetupFlowPanel();
             LoadGenres();
             LoadLocations();
+            LoadShowTimes();
+            
+            // Load movies async để tránh lag
+            await System.Threading.Tasks.Task.Run(() =>
+            {
+                System.Threading.Thread.Sleep(50); // Cho UI render xong
+            });
+            
             LoadMovies("", "Tất cả", "Tất cả");
         }
 
@@ -36,7 +44,7 @@ namespace MovieTicketApp
             flowPhim.FlowDirection = FlowDirection.LeftToRight;
             flowPhim.AutoScroll = true;
             flowPhim.AutoSize = false;
-            flowPhim.Padding = new Padding(5);
+            flowPhim.Padding = new Padding(3);
             flowPhim.Dock = DockStyle.Fill;
         }
 
@@ -73,13 +81,40 @@ namespace MovieTicketApp
             cboLocation.SelectedIndex = 0;
         }
 
-        private void LoadMovies(string keyword = "", string genreFilter = "", string locationFilter = "")
+        private void LoadMovies(string keyword = "", string genreFilter = "", string locationFilter = "", string selectedDate = null)
         {
             flowPhim.Controls.Clear();
-            DatabaseHelper db = new DatabaseHelper();
-            DataTable movies = db.GetMoviesWithShowTime(); // phải có LocationName trong query
 
-            foreach (DataRow row in movies.Rows)
+            DatabaseHelper db = new DatabaseHelper();
+            DataTable movies = db.GetMoviesWithShowTime();
+
+            // Lọc trước, sau đó gom nhóm theo MovieID để tránh nhân bản phim khi có nhiều suất chiếu
+            var filtered = movies.AsEnumerable()
+                                 .Where(row =>
+                                 {
+                                     string tenPhim = row["Title"].ToString();
+                                     string genre = row["Genre"].ToString();
+                                     string location = row["LocationName"].ToString();
+                                     DateTime showDate = Convert.ToDateTime(row["ShowDate"]);
+
+                                     TimeSpan showTime = TimeSpan.Parse(row["ShowTime"].ToString());
+                                     DateTime fullShowDateTime = showDate.Date.Add(showTime);
+
+                                     bool matchKeyword = string.IsNullOrEmpty(keyword) || tenPhim.ToLower().Contains(keyword.ToLower());
+                                     bool matchGenre = string.IsNullOrEmpty(genreFilter) || genreFilter == "Tất cả" || genre == genreFilter;
+                                     bool matchLocation = string.IsNullOrEmpty(locationFilter) || locationFilter == "Tất cả" || location == locationFilter;
+                                     bool matchDate = string.IsNullOrEmpty(selectedDate) || selectedDate == "Tất cả" || showDate.ToString("dd/MM/yyyy") == selectedDate;
+
+                                     bool matchTime = fullShowDateTime >= DateTime.Now;
+
+                                     return matchKeyword && matchGenre && matchLocation && matchDate && matchTime;
+
+                                 })
+                                 .GroupBy(r => r.Field<int>("MovieID"))
+                                 .Select(g => g.First())
+                                 .ToList();
+
+            foreach (DataRow row in filtered)
             {
                 string tenPhim = row["Title"].ToString();
                 string genre = row["Genre"].ToString();
@@ -88,24 +123,33 @@ namespace MovieTicketApp
                 string posterFile = row["Poster"].ToString();
                 int showTimeId = Convert.ToInt32(row["ShowTimeID"]);
 
-                bool matchKeyword = string.IsNullOrEmpty(keyword) || tenPhim.ToLower().Contains(keyword.ToLower());
-                bool matchGenre = string.IsNullOrEmpty(genreFilter) || genreFilter == "Tất cả" || genre == genreFilter;
-                bool matchLocation = string.IsNullOrEmpty(locationFilter) || locationFilter == "Tất cả" || location == locationFilter;
+                UC_ItemPhim item = new UC_ItemPhim(currentUser);
+                item.Size = new Size(200, 300);
+                item.SetData(tenPhim, thoiLuong, posterFile, showTimeId);
+                item.Margin = new Padding(3);
 
-                if (matchKeyword && matchGenre && matchLocation)
-                {
-                    UC_ItemPhim item = new UC_ItemPhim(currentUser);
-                    item.Size = new Size(200, 300);
-                    item.SetData(tenPhim, thoiLuong, posterFile, showTimeId);
-                    item.Margin = new Padding(3);
+                item.Description = row["Description"].ToString();
+                item.Genre = genre;
+                item.PosterFile = posterFile;
 
-                    item.Description = row["Description"].ToString();
-                    item.Genre = genre;
-                    item.PosterFile = posterFile;
-
-                    flowPhim.Controls.Add(item);
-                }
+                flowPhim.Controls.Add(item);
             }
+        }
+        private void LoadShowTimes()
+        {
+            DatabaseHelper db = new DatabaseHelper();
+            DataTable showTimes = db.GetShowTimes();
+
+            cbGioChieu.Items.Clear();
+            cbGioChieu.Items.Add("Tất cả");
+
+            var distinctDates = showTimes.AsEnumerable()
+                                         .Select(r => Convert.ToDateTime(r["Ngày chiếu"]).ToString("dd/MM/yyyy"))
+                                         .Distinct()
+                                         .ToList();
+
+            cbGioChieu.Items.AddRange(distinctDates.ToArray());
+            cbGioChieu.SelectedIndex = 0;
         }
 
         private void OpenChatBot()
@@ -129,6 +173,14 @@ namespace MovieTicketApp
         }
         private void flowPhim_Paint_1(object sender, PaintEventArgs e)
         {
+        }
+        private void cbGioChieu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedDate = cbGioChieu.SelectedItem?.ToString();
+            LoadMovies(txtSearchPhim.Text,
+                       cboTheLoai.SelectedItem?.ToString(),
+                       cboLocation.SelectedItem?.ToString(),
+                       selectedDate);
         }
     }
 }

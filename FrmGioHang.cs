@@ -95,54 +95,153 @@ namespace MovieTicketApp
             };
 
             // Xử lý thanh toán
+            //btnThanhToan.Click += (s, e) =>
+            //{
+            //    StringBuilder sb = new StringBuilder("Bạn đã thanh toán các sản phẩm:\n");
+            //    List<string> daThanhToan = new List<string>();
+
+            //    DatabaseHelper db = new DatabaseHelper();
+
+            //    // 1. Lấy trạng thái ID cho hóa đơn mới
+            //    int trangThaiId = db.GetTrangThaiId("Chua dung");
+
+            //    // 2. Tạo hóa đơn mới với đúng UserID
+            //    int hoaDonId = db.InsertHoaDon(currentUserId, TinhTongTienSo(), "DoAn", trangThaiId);
+
+            //    // 3. Thêm chi tiết đồ ăn
+            //    foreach (DataGridViewRow row in dgvGioHang.Rows)
+            //    {
+            //        bool chon = Convert.ToBoolean(row.Cells["Chon"].Value ?? false);
+            //        if (chon)
+            //        {
+            //            string tenMon = row.Cells["TenMon"].Value.ToString();
+            //            int soLuong = Convert.ToInt32(row.Cells["SoLuong"].Value);
+            //            int gia = Convert.ToInt32(row.Cells["Gia"].Value);
+
+            //            sb.AppendLine($"{tenMon} - SL: {soLuong} - {(soLuong * gia):N0} VND");
+            //            daThanhToan.Add(tenMon);
+
+            //            db.InsertChiTietHoaDonDoAn(hoaDonId, tenMon, soLuong, gia * soLuong);
+            //        }
+            //    }
+
+            //    // 4. Hiển thị thông báo
+            //    sb.AppendLine("\n" + lblTongTien.Text);
+            //    MessageBox.Show(sb.ToString(), "Thanh toán thành công");
+
+            //    // 5. Xóa các dòng đã chọn khỏi DataGridView
+            //    foreach (DataGridViewRow row in dgvGioHang.Rows.Cast<DataGridViewRow>().ToList())
+            //    {
+            //        bool chon = Convert.ToBoolean(row.Cells["Chon"].Value ?? false);
+            //        if (chon)
+            //        {
+            //            dgvGioHang.Rows.Remove(row);
+            //        }
+            //    }
+
+            //    // 6. Trả về danh sách món đã thanh toán cho UC_DoAn
+            //    this.Tag = daThanhToan;
+            //    this.DialogResult = DialogResult.OK;
+            //    this.Close();
+            //};
             btnThanhToan.Click += (s, e) =>
             {
-                StringBuilder sb = new StringBuilder("Bạn đã thanh toán các sản phẩm:\n");
-                List<string> daThanhToan = new List<string>();
-
-                DatabaseHelper db = new DatabaseHelper();
-
-                // 1. Lấy trạng thái ID cho hóa đơn mới
-                int trangThaiId = db.GetTrangThaiId("Chua thanh toan");
-
-                // 2. Tạo hóa đơn mới với đúng UserID
-                int hoaDonId = db.InsertHoaDon(currentUserId, TinhTongTienSo(), "DoAn", trangThaiId);
-
-                // 3. Thêm chi tiết đồ ăn
+                // Kiểm tra có phần hàng được chọn
+                bool coMonDuocChon = false;
                 foreach (DataGridViewRow row in dgvGioHang.Rows)
                 {
                     bool chon = Convert.ToBoolean(row.Cells["Chon"].Value ?? false);
                     if (chon)
                     {
-                        string tenMon = row.Cells["TenMon"].Value.ToString();
-                        int soLuong = Convert.ToInt32(row.Cells["SoLuong"].Value);
-                        int gia = Convert.ToInt32(row.Cells["Gia"].Value);
-
-                        sb.AppendLine($"{tenMon} - SL: {soLuong} - {(soLuong * gia):N0} VND");
-                        daThanhToan.Add(tenMon);
-
-                        db.InsertChiTietHoaDonDoAn(hoaDonId, tenMon, soLuong, gia * soLuong);
+                        coMonDuocChon = true;
+                        break;
                     }
                 }
 
-                // 4. Hiển thị thông báo
-                sb.AppendLine("\n" + lblTongTien.Text);
-                MessageBox.Show(sb.ToString(), "Thanh toán thành công");
-
-                // 5. Xóa các dòng đã chọn khỏi DataGridView
-                foreach (DataGridViewRow row in dgvGioHang.Rows.Cast<DataGridViewRow>().ToList())
+                if (!coMonDuocChon)
                 {
-                    bool chon = Convert.ToBoolean(row.Cells["Chon"].Value ?? false);
-                    if (chon)
-                    {
-                        dgvGioHang.Rows.Remove(row);
-                    }
+                    MessageBox.Show("Vui lòng chọn ít nhất 1 món để thanh toán!");
+                    return;
                 }
 
-                // 6. Trả về danh sách món đã thanh toán cho UC_DoAn
-                this.Tag = daThanhToan;
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                try
+                {
+                    DatabaseHelper db = new DatabaseHelper();
+
+                    // 1. Lấy trạng thái ID cho hóa đơn mới
+                    int trangThaiId = db.GetTrangThaiId("Chưa Thanh Toán");
+
+                    // 2. Tạo hóa đơn mới với đúng UserID
+                    decimal totalAmount = TinhTongTienSo();
+                    int hoaDonId = db.InsertHoaDon(currentUserId, (int)totalAmount, "DoAn", trangThaiId);
+
+                    // 3. Lấy danh sách đồ ăn được chọn
+                    List<(string TenMon, int SoLuong, int Gia)> selectedFoods = new List<(string, int, int)>();
+                    List<string> daThanhToan = new List<string>();
+
+                    foreach (DataGridViewRow row in dgvGioHang.Rows)
+                    {
+                        bool chon = Convert.ToBoolean(row.Cells["Chon"].Value ?? false);
+                        if (chon)
+                        {
+                            string tenMon = row.Cells["TenMon"].Value.ToString();
+                            int soLuong = Convert.ToInt32(row.Cells["SoLuong"].Value);
+                            int gia = Convert.ToInt32(row.Cells["Gia"].Value);
+
+                            selectedFoods.Add((tenMon, soLuong, gia));
+                            daThanhToan.Add(tenMon);
+
+                            // Thêm chi tiết đồ ăn vào database
+                            db.InsertChiTietHoaDonDoAn(hoaDonId, tenMon, soLuong, gia * soLuong);
+                        }
+                    }
+
+                    // 4. Mở FoodPaymentForm
+                    FoodPaymentForm paymentForm = new FoodPaymentForm(
+                        hoaDonId,
+                        currentUserId,
+                        totalAmount,
+                        selectedFoods
+                    );
+
+                    DialogResult paymentResult = paymentForm.ShowDialog();
+
+                    if (paymentResult == DialogResult.OK)
+                    {
+                        // Thanh toán thành công
+                        MessageBox.Show("Thanh toán thành công! Đơn hàng của bạn đã được xác nhận.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // 5. Xóa các dòng đã chọn khỏi DataGridView
+                        foreach (DataGridViewRow row in dgvGioHang.Rows.Cast<DataGridViewRow>().ToList())
+                        {
+                            bool chon = Convert.ToBoolean(row.Cells["Chon"].Value ?? false);
+                            if (chon)
+                            {
+                                dgvGioHang.Rows.Remove(row);
+                            }
+                        }
+
+                        // 6. Trả về danh sách món đã thanh toán cho UC_DoAn
+                        this.Tag = daThanhToan;
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        // Thanh toán bị hủy - xóa hóa đơn đã tạo
+                        string deleteQuery = $"DELETE FROM ChiTietHoaDonDoAn WHERE HoaDonID = {hoaDonId}";
+                        db.ExecuteNonQuery(deleteQuery);
+
+                        string deleteInvoiceQuery = $"DELETE FROM HoaDon WHERE HoaDonID = {hoaDonId}";
+                        db.ExecuteNonQuery(deleteInvoiceQuery);
+
+                        MessageBox.Show("Thanh toán đã bị hủy.", "Hủy bỏ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
             };
         }
 
@@ -176,6 +275,11 @@ namespace MovieTicketApp
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             // đã xử lý bằng lambda trong constructor, nên có thể để trống
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }

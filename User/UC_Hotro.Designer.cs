@@ -31,49 +31,56 @@
             // panelMessages
             // 
             this.panelMessages.AutoScroll = true;
+            this.panelMessages.BackColor = System.Drawing.Color.FromArgb(18, 18, 26);
             this.panelMessages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMessages.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.panelMessages.Location = new System.Drawing.Point(0, 0);
             this.panelMessages.Name = "panelMessages";
+            this.panelMessages.Padding = new System.Windows.Forms.Padding(16, 18, 16, 12);
             this.panelMessages.Size = new System.Drawing.Size(900, 650);
             this.panelMessages.TabIndex = 0;
             this.panelMessages.WrapContents = false;
             // 
             // panelInput
             // 
+            this.panelInput.FillColor = System.Drawing.Color.FromArgb(15, 15, 22);
+            this.panelInput.Padding = new System.Windows.Forms.Padding(12, 8, 12, 8);
             this.panelInput.Controls.Add(this.txtMessage);
             this.panelInput.Controls.Add(this.btnSend);
             this.panelInput.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelInput.Location = new System.Drawing.Point(0, 650);
             this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(900, 50);
+            this.panelInput.Size = new System.Drawing.Size(900, 64);
             this.panelInput.TabIndex = 1;
             // 
             // txtMessage
             // 
-            this.txtMessage.BorderRadius = 8;
+            this.txtMessage.BorderRadius = 12;
             this.txtMessage.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMessage.DefaultText = "";
             this.txtMessage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMessage.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMessage.Location = new System.Drawing.Point(0, 0);
+            this.txtMessage.FillColor = System.Drawing.Color.FromArgb(28, 28, 40);
+            this.txtMessage.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtMessage.ForeColor = System.Drawing.Color.White;
+            this.txtMessage.Location = new System.Drawing.Point(12, 8);
             this.txtMessage.Margin = new System.Windows.Forms.Padding(4);
             this.txtMessage.Name = "txtMessage";
+            this.txtMessage.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtMessage.PlaceholderText = "Nhập tin nhắn...";
             this.txtMessage.SelectedText = "";
-            this.txtMessage.Size = new System.Drawing.Size(820, 50);
+            this.txtMessage.Size = new System.Drawing.Size(776, 48);
             this.txtMessage.TabIndex = 0;
             // 
             // btnSend
             // 
-            this.btnSend.BorderRadius = 8;
+            this.btnSend.BorderRadius = 12;
             this.btnSend.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSend.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnSend.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSend.FillColor = System.Drawing.Color.FromArgb(229, 9, 20);
+            this.btnSend.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnSend.ForeColor = System.Drawing.Color.White;
-            this.btnSend.Location = new System.Drawing.Point(820, 0);
+            this.btnSend.Location = new System.Drawing.Point(788, 8);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(80, 50);
+            this.btnSend.Size = new System.Drawing.Size(100, 48);
             this.btnSend.TabIndex = 1;
             this.btnSend.Text = "Gửi";
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);

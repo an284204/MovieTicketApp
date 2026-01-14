@@ -12,7 +12,7 @@ namespace MovieTicketApp
         private readonly string connectionString;
 
         public DatabaseHelper()
-        { 
+        {
             connectionString = "Server=LAPTOP-B4J6DCSQ;Database=MovieTicketDB;Integrated Security=True;";
         }
 
@@ -86,7 +86,6 @@ namespace MovieTicketApp
                 cmd.ExecuteNonQuery();
             }
         }
-        // Dùng cho chat chung (ReceiverId)
         public List<ChatMessage> GetMessagesByReceiver(int receiverId)
         {
             var messages = new List<ChatMessage>();
@@ -114,7 +113,6 @@ namespace MovieTicketApp
             }
             return messages;
         }
-        // Dùng cho chat riêng (giữa staff và customer)
         public List<ChatMessage> GetMessagesWithCustomer(int customerId)
         {
             var messages = new List<ChatMessage>();
@@ -158,7 +156,6 @@ namespace MovieTicketApp
             }
             return list;
         }
-        // Lấy danh sách Roles
         public DataTable GetRoles()
         {
             using (SqlConnection conn = GetConnection())
@@ -198,16 +195,16 @@ namespace MovieTicketApp
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = @"INSERT INTO Movie (Title, Duration, Poster, Description, Genre) 
+                string query = @"INSERT INTO Movie (Title, Duration, Poster, Description, Genre)  
                          VALUES (@title, @duration, @poster, @description, @genre)";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@title", title);
-                    cmd.Parameters.AddWithValue("@duration", duration);
-                    cmd.Parameters.AddWithValue("@poster", poster);
-                    cmd.Parameters.AddWithValue("@description", description);
-                    cmd.Parameters.AddWithValue("@genre", genre);
+                    cmd.Parameters.AddWithValue("@duration", duration > 0 ? duration : 0);
+                    cmd.Parameters.AddWithValue("@poster", string.IsNullOrEmpty(poster) ? (object)DBNull.Value : poster);
+                    cmd.Parameters.AddWithValue("@description", description ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@genre", genre ?? (object)DBNull.Value);
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -218,18 +215,18 @@ namespace MovieTicketApp
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = @"UPDATE Movie 
-                         SET Title=@title, Duration=@duration, Poster=@poster, Description=@description, Genre=@genre 
+                string query = @"UPDATE Movie  
+                         SET Title=@title, Duration=@duration, Poster=@poster, Description=@description, Genre=@genre  
                          WHERE MovieID=@id";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", movieId);
                     cmd.Parameters.AddWithValue("@title", title);
-                    cmd.Parameters.AddWithValue("@duration", duration);
-                    cmd.Parameters.AddWithValue("@poster", poster);
-                    cmd.Parameters.AddWithValue("@description", description);
-                    cmd.Parameters.AddWithValue("@genre", genre);
+                    cmd.Parameters.AddWithValue("@duration", duration > 0 ? duration : 0);
+                    cmd.Parameters.AddWithValue("@poster", string.IsNullOrEmpty(poster) ? (object)DBNull.Value : poster);
+                    cmd.Parameters.AddWithValue("@description", description ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@genre", genre ?? (object)DBNull.Value);
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -237,20 +234,55 @@ namespace MovieTicketApp
             }
         }
 
-        public void DeleteMovie(int movieId)
+        public void DeleteMovieSafe(int movieId)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM Movie WHERE MovieID=@id";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                conn.Open();
+                using (SqlTransaction tran = conn.BeginTransaction())
                 {
-                    cmd.Parameters.AddWithValue("@id", movieId);
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
+                    try
+                    {
+                        // Xóa vé
+                        string deleteTickets = @"
+                    DELETE FROM Ticket 
+                    WHERE ShowTimeID IN (
+                        SELECT ShowTimeID FROM ShowTime 
+                        WHERE MovieID = @id
+                    )";
+                        using (SqlCommand cmd = new SqlCommand(deleteTickets, conn, tran))
+                        {
+                            cmd.Parameters.AddWithValue("@id", movieId);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        // Xóa suất chiếu
+                        string deleteShowTime = "DELETE FROM ShowTime WHERE MovieID=@id";
+                        using (SqlCommand cmd = new SqlCommand(deleteShowTime, conn, tran))
+                        {
+                            cmd.Parameters.AddWithValue("@id", movieId);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        // Xóa phim
+                        string deleteMovie = "DELETE FROM Movie WHERE MovieID=@id";
+                        using (SqlCommand cmd = new SqlCommand(deleteMovie, conn, tran))
+                        {
+                            cmd.Parameters.AddWithValue("@id", movieId);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        tran.Commit();
+                    }
+                    catch
+                    {
+                        tran.Rollback();
+                        throw;
+                    }
                 }
             }
         }
+
         public DataTable GetFood()
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -262,7 +294,8 @@ namespace MovieTicketApp
                 return dt;
             }
         }
-        public bool InsertFood(string name, int price, string imageUrl, string titleFood, string description)
+
+        public bool InsertFood(string name, int price, string imageUrl, string titleFood, int stock)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -272,10 +305,46 @@ namespace MovieTicketApp
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Name", name);
                 cmd.Parameters.AddWithValue("@Price", price);
-                cmd.Parameters.AddWithValue("@Stock", 50); // mặc định 50
-                cmd.Parameters.AddWithValue("@ImageURL", imageUrl);
+                cmd.Parameters.AddWithValue("@Stock", stock); // bạn có thể mặc định 50 nếu muốn
+                cmd.Parameters.AddWithValue("@ImageURL", string.IsNullOrEmpty(imageUrl) ? (object)DBNull.Value : imageUrl);
                 cmd.Parameters.AddWithValue("@Status", true);
                 cmd.Parameters.AddWithValue("@TitleFood", titleFood);
+
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+                return rows > 0;
+            }
+        }
+
+        public bool UpdateFood(int foodId, string name, int price, string imageUrl, string titleFood, int stock)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = @"UPDATE Food
+                         SET Name=@Name, Price=@Price, Stock=@Stock, ImageURL=@ImageURL, TitleFood=@TitleFood
+                         WHERE FoodID=@FoodID";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@FoodID", foodId);
+                cmd.Parameters.AddWithValue("@Name", name);
+                cmd.Parameters.AddWithValue("@Price", price);
+                cmd.Parameters.AddWithValue("@Stock", stock);
+                cmd.Parameters.AddWithValue("@ImageURL", string.IsNullOrEmpty(imageUrl) ? (object)DBNull.Value : imageUrl);
+                cmd.Parameters.AddWithValue("@TitleFood", titleFood);
+
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+                return rows > 0;
+            }
+        }
+
+        public bool DeleteFood(int foodId)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM Food WHERE FoodID=@FoodID";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@FoodID", foodId);
 
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
@@ -348,6 +417,22 @@ namespace MovieTicketApp
                 }
             }
         }
+        public string GetMovieNameByShowTime(int showTimeId)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"SELECT m.Title FROM Movie m
+                               INNER JOIN ShowTime st ON m.MovieID = st.MovieID
+                               WHERE st.ShowTimeID = @ShowTimeID";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ShowTimeID", showTimeId);
+
+                object result = cmd.ExecuteScalar();
+                return result == null ? "Unknown Movie" : result.ToString();
+            }
+        }
         public DataTable GetSeatsByShowTime(int showTimeId)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -410,12 +495,14 @@ namespace MovieTicketApp
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = @"
-            SELECT M.MovieID, M.Title, M.Duration, M.Poster, M.Description, M.Genre,
-                   ST.ShowTimeID, L.LocationName
-            FROM Movie M
-            JOIN ShowTime ST ON M.MovieID = ST.MovieID
-            JOIN Location L ON ST.LocationID = L.LocationID
-            WHERE L.LocationName IS NOT NULL";
+        SELECT M.MovieID, M.Title, M.Duration, M.Poster, M.Description, M.Genre,
+               ST.ShowTimeID, ST.ShowDate, ST.ShowTime, ST.TicketPrice,
+               L.LocationName
+        FROM Movie M
+        JOIN ShowTime ST ON M.MovieID = ST.MovieID
+        JOIN Location L ON ST.LocationID = L.LocationID
+        WHERE L.LocationName IS NOT NULL
+        ORDER BY ST.ShowDate, ST.ShowTime";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
@@ -455,18 +542,70 @@ namespace MovieTicketApp
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = @"
-            SELECT ST.ShowTimeID, M.Title AS MovieTitle, R.RoomName, L.LocationName,
-                   ST.ShowDate, ST.ShowTime, ST.TicketPrice
-            FROM ShowTime ST
-            INNER JOIN Movie M ON ST.MovieID = M.MovieID
-            INNER JOIN Room R ON ST.RoomID = R.RoomID
-            INNER JOIN Location L ON ST.LocationID = L.LocationID
-            ORDER BY ST.ShowDate, ST.ShowTime";
+                               SELECT ST.ShowTimeID AS Id,
+                               ST.MovieID,
+                               M.Title AS [Tên phim],
+                               ST.RoomID,
+                               R.RoomName AS [Phòng],
+                               ST.LocationID,
+                               L.LocationName AS [Địa điểm],
+                               ST.ShowDate AS [Ngày chiếu],
+                               ST.ShowTime AS [Giờ chiếu],
+                               ST.TicketPrice AS [Giá vé]
+                        FROM ShowTime ST
+                        INNER JOIN Movie M ON ST.MovieID = M.MovieID
+                        INNER JOIN Room R ON ST.RoomID = R.RoomID
+                        INNER JOIN Location L ON ST.LocationID = L.LocationID
+                        ORDER BY ST.ShowDate, ST.ShowTime; ";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 return dt;
+            }
+        }
+        public bool IsDuplicateShowTimeExcept(int showTimeId, int locationId, int roomId, DateTime showDate, string showTime)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = @"SELECT COUNT(*) FROM ShowTime
+                         WHERE LocationID = @LocationID AND RoomID = @RoomID
+                         AND ShowDate = @ShowDate AND ShowTime = @ShowTime
+                         AND ShowTimeID != @ShowTimeID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@LocationID", locationId);
+                    cmd.Parameters.AddWithValue("@RoomID", roomId);
+                    cmd.Parameters.AddWithValue("@ShowDate", showDate);
+                    cmd.Parameters.AddWithValue("@ShowTime", showTime);
+                    cmd.Parameters.AddWithValue("@ShowTimeID", showTimeId);
+
+                    conn.Open();
+                    int count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
+        public bool IsDuplicateShowTime(int locationId, int roomId, DateTime showDate, string showTime)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = @"SELECT COUNT(*) FROM ShowTime
+                         WHERE LocationID = @LocationID AND RoomID = @RoomID
+                         AND ShowDate = @ShowDate AND ShowTime = @ShowTime";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@LocationID", locationId);
+                    cmd.Parameters.AddWithValue("@RoomID", roomId);
+                    cmd.Parameters.AddWithValue("@ShowDate", showDate);
+                    cmd.Parameters.AddWithValue("@ShowTime", showTime);
+
+                    conn.Open();
+                    int count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
             }
         }
         public void InsertShowTime(int movieId, int roomId, int locationId, DateTime showDate, string showTime, decimal ticketPrice)
@@ -517,13 +656,33 @@ namespace MovieTicketApp
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM ShowTime WHERE ShowTimeID=@ShowTimeID";
+                conn.Open();
+                SqlTransaction transaction = conn.BeginTransaction();
 
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                try
                 {
-                    cmd.Parameters.AddWithValue("@ShowTimeID", showTimeId);
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
+                    // Xóa vé trước
+                    string deleteTickets = "DELETE FROM Ticket WHERE ShowTimeID=@ShowTimeID";
+                    using (SqlCommand cmd1 = new SqlCommand(deleteTickets, conn, transaction))
+                    {
+                        cmd1.Parameters.AddWithValue("@ShowTimeID", showTimeId);
+                        cmd1.ExecuteNonQuery();
+                    }
+
+                    // Xóa xuất chiếu
+                    string deleteShowTime = "DELETE FROM ShowTime WHERE ShowTimeID=@ShowTimeID";
+                    using (SqlCommand cmd2 = new SqlCommand(deleteShowTime, conn, transaction))
+                    {
+                        cmd2.Parameters.AddWithValue("@ShowTimeID", showTimeId);
+                        cmd2.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    throw; // báo lỗi ra ngoài để xử lý
                 }
             }
         }
@@ -532,17 +691,17 @@ namespace MovieTicketApp
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = @"
-        SELECT h.HoaDonID, h.NgayLap, h.TongTien,
-               m.Title AS MovieTitle, t.MaVe, s.SeatCode, st.ShowDate, st.ShowTime, cv.Gia,
-               tt.TenTrangThai, tt.ColorCode
-        FROM HoaDon h
-        JOIN ChiTietHoaDonVe cv ON h.HoaDonID = cv.HoaDonID
-        JOIN Ticket t ON cv.TicketID = t.TicketID
-        JOIN Seat s ON t.SeatID = s.SeatID
-        JOIN ShowTime st ON t.ShowTimeID = st.ShowTimeID
-        JOIN Movie m ON st.MovieID = m.MovieID
-        JOIN TrangThai tt ON h.TrangThaiID = tt.TrangThaiID
-        WHERE h.LoaiHoaDon = 'Ve' AND h.UserID = @UserID";
+                    SELECT h.HoaDonID, h.NgayLap, h.TongTien,
+                           m.Title AS MovieTitle, t.MaVe, s.SeatCode, st.ShowDate, st.ShowTime, cv.Gia,
+                           tt.TenTrangThai, tt.ColorCode
+                    FROM HoaDon h
+                    JOIN ChiTietHoaDonVe cv ON h.HoaDonID = cv.HoaDonID
+                    JOIN Ticket t ON cv.TicketID = t.TicketID
+                    JOIN Seat s ON t.SeatID = s.SeatID
+                    JOIN ShowTime st ON t.ShowTimeID = st.ShowTimeID
+                    JOIN Movie m ON st.MovieID = m.MovieID
+                    JOIN TrangThai tt ON t.TrangThaiID = tt.TrangThaiID 
+                    WHERE h.LoaiHoaDon = 'Ve' AND h.UserID = @UserID;";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 adapter.SelectCommand.Parameters.AddWithValue("@UserID", userId);
@@ -692,7 +851,84 @@ namespace MovieTicketApp
                 cmd.ExecuteNonQuery();
             }
         }
+        public (DataTable header, DataTable details) GetFoodInvoiceById(int hoaDonId)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
 
+                string headerQuery = @"
+                    SELECT TOP 1 h.HoaDonID, h.UserID, h.NgayLap, h.TongTien, h.TrangThaiID,
+                           h.LocationID, u.HoTen, u.SoDienThoai, u.Email,
+                           l.LocationName, tt.TenTrangThai
+                    FROM HoaDon h
+                    INNER JOIN Users u ON h.UserID = u.UserID
+                    LEFT JOIN Location l ON h.LocationID = l.LocationID
+                    LEFT JOIN TrangThai tt ON h.TrangThaiID = tt.TrangThaiID
+                    WHERE h.HoaDonID = @HoaDonID AND h.LoaiHoaDon = 'DoAn';";
+
+                DataTable headerTable = new DataTable();
+                using (SqlCommand headerCmd = new SqlCommand(headerQuery, conn))
+                {
+                    headerCmd.Parameters.AddWithValue("@HoaDonID", hoaDonId);
+                    SqlDataAdapter headerAdapter = new SqlDataAdapter(headerCmd);
+                    headerAdapter.Fill(headerTable);
+                }
+
+                string detailQuery = @"
+                    SELECT f.Name AS FoodName,
+                           cd.SoLuong,
+                           CAST(
+                               CASE WHEN cd.SoLuong <= 0 THEN cd.Gia
+                                    ELSE CAST(cd.Gia AS decimal(18,2)) / cd.SoLuong
+                               END AS decimal(18,2)
+                           ) AS DonGia,
+                           cd.Gia AS ThanhTien
+                    FROM ChiTietHoaDonDoAn cd
+                    INNER JOIN Food f ON cd.FoodID = f.FoodID
+                    WHERE cd.HoaDonID = @HoaDonID;";
+
+                DataTable detailTable = new DataTable();
+                using (SqlCommand detailCmd = new SqlCommand(detailQuery, conn))
+                {
+                    detailCmd.Parameters.AddWithValue("@HoaDonID", hoaDonId);
+                    SqlDataAdapter detailAdapter = new SqlDataAdapter(detailCmd);
+                    detailAdapter.Fill(detailTable);
+                }
+
+                return (headerTable, detailTable);
+            }
+        }
+        public DataTable GetTicketByCode(string maVe)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"
+                    SELECT T.TicketID, T.SeatID, 
+                           S.SeatCode AS SeatNumber, 
+                           T.MaVe, T.TrangThaiID,
+                           ST.ShowDate, ST.ShowTime, 
+                           M.Title, R.RoomName, L.LocationName,
+                           CTHDV.Gia AS GiaVe   -- lấy giá từ bảng ChiTietHoaDonVe
+                    FROM Ticket T
+                    JOIN ShowTime ST ON T.ShowTimeID = ST.ShowTimeID
+                    JOIN Movie M ON ST.MovieID = M.MovieID
+                    JOIN Room R ON ST.RoomID = R.RoomID
+                    JOIN Location L ON ST.LocationID = L.LocationID
+                    JOIN Seat S ON T.SeatID = S.SeatID
+                    JOIN ChiTietHoaDonVe CTHDV ON T.TicketID = CTHDV.TicketID
+                    WHERE T.MaVe = @MaVe;";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaVe", maVe);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
+        }
         public void InsertAccount(string hoTen, DateTime ngaySinh, string email, string sdt, string password, int roleId)
         {
             using (SqlConnection conn = GetConnection())
@@ -743,6 +979,49 @@ namespace MovieTicketApp
                 cmd.ExecuteNonQuery();
             }
         }
+        public void DeleteAccountSafe(int userId)
+        {
+            using (SqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                using (SqlTransaction tran = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        // Xóa tin nhắn mà user là người gửi
+                        string deleteMessages = "DELETE FROM ChatMessages WHERE SenderId=@UserID";
+                        using (SqlCommand cmdMsg = new SqlCommand(deleteMessages, conn, tran))
+                        {
+                            cmdMsg.Parameters.AddWithValue("@UserID", userId);
+                            cmdMsg.ExecuteNonQuery();
+                        }
+
+                        // Xóa hóa đơn liên quan
+                        string deleteInvoices = "DELETE FROM HoaDon WHERE UserID=@UserID";
+                        using (SqlCommand cmdInv = new SqlCommand(deleteInvoices, conn, tran))
+                        {
+                            cmdInv.Parameters.AddWithValue("@UserID", userId);
+                            cmdInv.ExecuteNonQuery();
+                        }
+
+                        // Cuối cùng xóa user
+                        string deleteUser = "DELETE FROM Users WHERE UserID=@UserID";
+                        using (SqlCommand cmdUser = new SqlCommand(deleteUser, conn, tran))
+                        {
+                            cmdUser.Parameters.AddWithValue("@UserID", userId);
+                            cmdUser.ExecuteNonQuery();
+                        }
+
+                        tran.Commit();
+                    }
+                    catch
+                    {
+                        tran.Rollback();
+                        throw; // báo lỗi ra ngoài để UI hiển thị
+                    }
+                }
+            }
+        }
 
         public void UpdateAccountRole(int userId, int roleId)
         {
@@ -791,11 +1070,11 @@ namespace MovieTicketApp
         public DataTable GetTopHotMovies(int topCount)
         {
             string query = @"
-        SELECT TOP (@TopCount) m.MovieID, m.Title, m.Poster, COUNT(t.TicketID) AS TotalTickets
+        SELECT TOP (@TopCount) m.MovieID, m.Title, m.Description, m.Duration, m.Genre, m.Poster, COUNT(t.TicketID) AS TotalTickets
         FROM Ticket t
         INNER JOIN ShowTime s ON t.ShowTimeID = s.ShowTimeID
         INNER JOIN Movie m ON s.MovieID = m.MovieID
-        GROUP BY m.MovieID, m.Title, m.Poster
+        GROUP BY m.MovieID, m.Title, m.Description, m.Duration, m.Genre, m.Poster
         ORDER BY TotalTickets DESC";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -808,6 +1087,63 @@ namespace MovieTicketApp
                 return dt;
             }
         }
+        // Kiểm tra email có tồn tại không (dùng cho quên mật khẩu)
+        public bool CheckEmailExists(string email)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM Users WHERE Email = @Email";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Email", email);
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
+            }
+        }
+
+        // Lấy thông tin user từ email (dùng cho quên mật khẩu)
+        public UserInfo GetUserByEmail(string email)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"
+                    SELECT UserID, RoleID, HoTen, Email, SoDienThoai, NgaySinh
+                    FROM Users
+                    WHERE Email = @Email";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Email", email);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    return new UserInfo
+                    {
+                        UserId = Convert.ToInt32(reader["UserID"]),
+                        RoleId = Convert.ToInt32(reader["RoleID"]),
+                        HoTen = reader["HoTen"].ToString(),
+                        Email = reader["Email"].ToString(),
+                        SoDienThoai = reader["SoDienThoai"].ToString(),
+                        NgaySinh = reader["NgaySinh"] != DBNull.Value ? Convert.ToDateTime(reader["NgaySinh"]) : (DateTime?)null
+                    };
+                }
+                return null;
+            }
+        }
+        public DataTable ExecuteStoredProcedure(string spName)
+        {
+            using (SqlConnection conn = GetConnection())
+            using (SqlCommand cmd = new SqlCommand(spName, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
+        }
+
+
 
     }
 }

@@ -37,7 +37,7 @@
             this.chatPanel.Location = new System.Drawing.Point(0, 0);
             this.chatPanel.Name = "chatPanel";
             this.chatPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.chatPanel.Size = new System.Drawing.Size(400, 335);
+            this.chatPanel.Size = new System.Drawing.Size(478, 399);
             this.chatPanel.TabIndex = 0;
             this.chatPanel.WrapContents = false;
             // 
@@ -52,7 +52,7 @@
             this.txtInput.Name = "txtInput";
             this.txtInput.PlaceholderText = "Nhập câu hỏi...";
             this.txtInput.SelectedText = "";
-            this.txtInput.Size = new System.Drawing.Size(280, 35);
+            this.txtInput.Size = new System.Drawing.Size(330, 50);
             this.txtInput.TabIndex = 1;
             // 
             // btnSend
@@ -62,7 +62,7 @@
             this.btnSend.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSend.ForeColor = System.Drawing.Color.White;
             this.btnSend.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSend.Location = new System.Drawing.Point(290, 5);
+            this.btnSend.Location = new System.Drawing.Point(370, 5);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(100, 35);
             this.btnSend.TabIndex = 2;
@@ -74,16 +74,16 @@
             this.bottomPanel.Controls.Add(this.txtInput);
             this.bottomPanel.Controls.Add(this.btnSend);
             this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottomPanel.Location = new System.Drawing.Point(0, 335);
+            this.bottomPanel.Location = new System.Drawing.Point(0, 399);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(400, 45);
+            this.bottomPanel.Size = new System.Drawing.Size(478, 45);
             this.bottomPanel.TabIndex = 3;
             // 
             // Chatbot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 380);
+            this.ClientSize = new System.Drawing.Size(478, 444);
             this.Controls.Add(this.chatPanel);
             this.Controls.Add(this.bottomPanel);
             this.Name = "Chatbot";

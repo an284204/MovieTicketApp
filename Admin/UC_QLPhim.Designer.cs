@@ -15,9 +15,9 @@ namespace MovieTicketApp
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new System.Windows.Forms.Label();
             this.dgvPhim = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtTenPhim = new Guna.UI2.WinForms.Guna2TextBox();
@@ -36,41 +36,41 @@ namespace MovieTicketApp
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(70)))));
-            this.lblTitle.Location = new System.Drawing.Point(25, 15);
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(35)))), ((int)(((byte)(48)))));
+            this.lblTitle.Location = new System.Drawing.Point(25, 20);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(194, 38);
+            this.lblTitle.Size = new System.Drawing.Size(253, 48);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Quản lý phim";
+            this.lblTitle.Text = "Quản Lý Phim";
             // 
             // dgvPhim
             // 
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            this.dgvPhim.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvPhim.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPhim.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPhim.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPhim.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPhim.ColumnHeadersHeight = 36;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPhim.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPhim.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPhim.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
             this.dgvPhim.Location = new System.Drawing.Point(25, 360);
             this.dgvPhim.Name = "dgvPhim";
             this.dgvPhim.RowHeadersVisible = false;
             this.dgvPhim.RowHeadersWidth = 62;
             this.dgvPhim.RowTemplate.Height = 28;
-            this.dgvPhim.Size = new System.Drawing.Size(825, 220);
+            this.dgvPhim.Size = new System.Drawing.Size(959, 337);
             this.dgvPhim.TabIndex = 12;
             this.dgvPhim.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvPhim.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -153,41 +153,41 @@ namespace MovieTicketApp
             // 
             // btnThem
             // 
-            this.btnThem.BorderRadius = 8;
-            this.btnThem.FillColor = System.Drawing.Color.GreenYellow;
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnThem.ForeColor = System.Drawing.Color.Black;
+            this.btnThem.BorderRadius = 10;
+            this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Location = new System.Drawing.Point(450, 100);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(90, 35);
+            this.btnThem.Size = new System.Drawing.Size(100, 40);
             this.btnThem.TabIndex = 9;
-            this.btnThem.Text = "Thêm";
+            this.btnThem.Text = "➕ Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
-            this.btnSua.BorderRadius = 8;
-            this.btnSua.FillColor = System.Drawing.Color.Gold;
-            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSua.BorderRadius = 10;
+            this.btnSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.btnSua.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Location = new System.Drawing.Point(450, 150);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(90, 35);
+            this.btnSua.Size = new System.Drawing.Size(100, 40);
             this.btnSua.TabIndex = 10;
-            this.btnSua.Text = "Sửa";
+            this.btnSua.Text = "✏️ Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.BorderRadius = 8;
-            this.btnXoa.FillColor = System.Drawing.Color.Tomato;
-            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnXoa.ForeColor = System.Drawing.Color.Black;
+            this.btnXoa.BorderRadius = 10;
+            this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Location = new System.Drawing.Point(450, 200);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(90, 35);
+            this.btnXoa.Size = new System.Drawing.Size(100, 40);
             this.btnXoa.TabIndex = 11;
-            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Text = "🗑️ Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // picPoster
@@ -204,19 +204,19 @@ namespace MovieTicketApp
             // 
             // btnChonAnh
             // 
-            this.btnChonAnh.BorderRadius = 8;
-            this.btnChonAnh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnChonAnh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnChonAnh.BorderRadius = 10;
+            this.btnChonAnh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(90)))), ((int)(((byte)(140)))));
+            this.btnChonAnh.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.btnChonAnh.ForeColor = System.Drawing.Color.White;
             this.btnChonAnh.Location = new System.Drawing.Point(25, 250);
             this.btnChonAnh.Name = "btnChonAnh";
-            this.btnChonAnh.Size = new System.Drawing.Size(120, 35);
+            this.btnChonAnh.Size = new System.Drawing.Size(120, 38);
             this.btnChonAnh.TabIndex = 3;
-            this.btnChonAnh.Text = "Chọn ảnh";
+            this.btnChonAnh.Text = "📁 Chọn ảnh";
             // 
             // UC_QLPhim
             // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.picPoster);
             this.Controls.Add(this.btnChonAnh);
@@ -229,7 +229,7 @@ namespace MovieTicketApp
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.dgvPhim);
             this.Name = "UC_QLPhim";
-            this.Size = new System.Drawing.Size(870, 600);
+            this.Size = new System.Drawing.Size(1000, 700);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPoster)).EndInit();
             this.ResumeLayout(false);

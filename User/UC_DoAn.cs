@@ -84,9 +84,9 @@ namespace MovieTicketApp
                     }
 
                     UC_ItemDoAn item = new UC_ItemDoAn();
-                    item.Size = new Size(180, 230);
+                    item.Size = new Size(180, 270);
                     item.SetData(tenMon, gia, hinh);
-                    item.Margin = new Padding(3);
+                    item.Margin = new Padding(8);
 
                     item.OnThemMon += (s, mon) =>
                     {

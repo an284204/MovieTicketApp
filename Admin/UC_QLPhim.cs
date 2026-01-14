@@ -20,7 +20,6 @@ namespace MovieTicketApp
             dgvPhim.CellClick += dgvPhim_CellClick;
         }
 
-        // ✅ Nạp danh sách phim từ DB
         private void UC_QLPhim_Load(object sender, EventArgs e)
         {
             LoadMovies();
@@ -28,18 +27,23 @@ namespace MovieTicketApp
 
         private void LoadMovies()
         {
-            dgvPhim.DataSource = db.GetMovies();
-            dgvPhim.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvPhim.RowTemplate.Height = 30;
-            dgvPhim.DefaultCellStyle.Font = new Font("Segoe UI", 10);
-            dgvPhim.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            try
+            {
+                dgvPhim.DataSource = db.GetMovies();
+                dgvPhim.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvPhim.RowTemplate.Height = 30;
+                dgvPhim.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+                dgvPhim.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
 
-            // Ẩn cột Poster để không hiển thị đường dẫn
-            if (dgvPhim.Columns["Poster"] != null)
-                dgvPhim.Columns["Poster"].Visible = false;
+                if (dgvPhim.Columns["Poster"] != null)
+                    dgvPhim.Columns["Poster"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải danh sách phim: " + ex.Message);
+            }
         }
 
-        // ✅ Chọn ảnh poster
         private void BtnChonAnh_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog open = new OpenFileDialog())
@@ -48,19 +52,25 @@ namespace MovieTicketApp
                 open.Title = "Chọn ảnh poster phim";
                 if (open.ShowDialog() == DialogResult.OK)
                 {
-                    posterPath = open.FileName;
-                    picPoster.Image = Image.FromFile(open.FileName);
-                    picPoster.SizeMode = PictureBoxSizeMode.StretchImage;
+                    try
+                    {
+                        posterPath = open.FileName;
+                        picPoster.Image?.Dispose(); 
+                        picPoster.Image = Image.FromFile(open.FileName);
+                        picPoster.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi mở ảnh: " + ex.Message);
+                    }
                 }
             }
         }
 
-        // ✅ Thêm phim
         private void btnThem_Click(object sender, EventArgs e)
         {
             string title = txtTenPhim.Text.Trim();
             string genre = txtTheLoai.Text.Trim();
-            int duration = int.Parse(txtThoiLuong.Text.Trim());
             string description = txtMoTa.Text.Trim();
 
             if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(genre))
@@ -69,12 +79,24 @@ namespace MovieTicketApp
                 return;
             }
 
-            db.InsertMovie(title, duration, posterPath, description, genre);
-            MessageBox.Show("Thêm phim thành công!");
-            LoadMovies();
+            if (!int.TryParse(txtThoiLuong.Text.Trim(), out int duration))
+            {
+                MessageBox.Show("Thời lượng phải là số nguyên!");
+                return;
+            }
+
+            try
+            {
+                db.InsertMovie(title, duration, posterPath, description, genre);
+                MessageBox.Show("Thêm phim thành công!");
+                LoadMovies();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi thêm phim: " + ex.Message);
+            }
         }
 
-        // ✅ Sửa phim
         private void btnSua_Click(object sender, EventArgs e)
         {
             if (selectedMovieId == -1)
@@ -85,15 +107,26 @@ namespace MovieTicketApp
 
             string title = txtTenPhim.Text.Trim();
             string genre = txtTheLoai.Text.Trim();
-            int duration = int.Parse(txtThoiLuong.Text.Trim());
             string description = txtMoTa.Text.Trim();
 
-            db.UpdateMovie(selectedMovieId, title, duration, posterPath, description, genre);
-            MessageBox.Show("Cập nhật phim thành công!");
-            LoadMovies();
+            if (!int.TryParse(txtThoiLuong.Text.Trim(), out int duration))
+            {
+                MessageBox.Show("Thời lượng phải là số nguyên!");
+                return;
+            }
+
+            try
+            {
+                db.UpdateMovie(selectedMovieId, title, duration, posterPath, description, genre);
+                MessageBox.Show("Cập nhật phim thành công!");
+                LoadMovies();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật phim: " + ex.Message);
+            }
         }
 
-        // ✅ Xóa phim
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (selectedMovieId == -1)
@@ -102,12 +135,22 @@ namespace MovieTicketApp
                 return;
             }
 
-            db.DeleteMovie(selectedMovieId);
-            MessageBox.Show("Xóa phim thành công!");
-            LoadMovies();
+            var confirm = MessageBox.Show("Bạn có chắc muốn xóa phim này?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
+            {
+                try
+                {
+                    db.DeleteMovieSafe(selectedMovieId); 
+                    MessageBox.Show("Xóa phim thành công!");
+                    LoadMovies();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi xóa phim: " + ex.Message);
+                }
+            }
         }
 
-        // ✅ Khi click vào phim trong bảng
         private void dgvPhim_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -120,13 +163,21 @@ namespace MovieTicketApp
                 txtThoiLuong.Text = row.Cells["Duration"].Value.ToString();
                 txtMoTa.Text = row.Cells["Description"].Value.ToString();
 
-                // Load poster nếu có
-                string poster = row.Cells["Poster"].Value.ToString();
+                string poster = row.Cells["Poster"].Value?.ToString();
                 if (!string.IsNullOrEmpty(poster) && File.Exists(poster))
                 {
-                    picPoster.Image = Image.FromFile(poster);
-                    picPoster.SizeMode = PictureBoxSizeMode.StretchImage;
-                    posterPath = poster;
+                    try
+                    {
+                        picPoster.Image?.Dispose();
+                        picPoster.Image = Image.FromFile(poster);
+                        picPoster.SizeMode = PictureBoxSizeMode.StretchImage;
+                        posterPath = poster;
+                    }
+                    catch
+                    {
+                        picPoster.Image = null;
+                        posterPath = "";
+                    }
                 }
                 else
                 {

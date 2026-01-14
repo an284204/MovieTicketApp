@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace MovieTicketApp
@@ -8,40 +9,43 @@ namespace MovieTicketApp
     public partial class UC_QLDoAn : UserControl
     {
         private string selectedImagePath = "";
-        private DatabaseHelper db = new DatabaseHelper();
+        private int selectedFoodId = -1;
+        private readonly DatabaseHelper db = new DatabaseHelper();
 
         public UC_QLDoAn()
         {
             InitializeComponent();
             this.Load += UC_QLDoAn_Load;
+            dgvDoAn.CellClick += dgvDoAn_CellClick;
+            txtStock.KeyPress += txtStock_KeyPress; 
         }
 
         private void UC_QLDoAn_Load(object sender, EventArgs e)
         {
             LoadFoodData();
+            LoadFoodCategories();
         }
 
-        // Load dữ liệu từ DB vào DataGridView
+ 
         private void LoadFoodData()
         {
             DataTable dt = db.GetFood();
             dgvDoAn.DataSource = dt;
 
-            // Đổi tên header các cột
             if (dgvDoAn.Columns.Contains("FoodID"))
-                dgvDoAn.Columns["FoodID"].HeaderText = "Mã món";
+                dgvDoAn.Columns["FoodID"].HeaderText = "ID";
             if (dgvDoAn.Columns.Contains("Name"))
                 dgvDoAn.Columns["Name"].HeaderText = "Tên món ăn";
             if (dgvDoAn.Columns.Contains("Price"))
                 dgvDoAn.Columns["Price"].HeaderText = "Giá (VNĐ)";
             if (dgvDoAn.Columns.Contains("Stock"))
-                dgvDoAn.Columns["Stock"].HeaderText = "Số lượng tồn";
-            if (dgvDoAn.Columns.Contains("ImageURL"))
-                dgvDoAn.Columns["ImageURL"].HeaderText = "Ảnh";
+                dgvDoAn.Columns["Stock"].HeaderText = "Số lượng";
             if (dgvDoAn.Columns.Contains("TitleFood"))
                 dgvDoAn.Columns["TitleFood"].HeaderText = "Loại";
 
-            // Style bảng cho đẹp
+            if (dgvDoAn.Columns.Contains("ImageURL"))
+                dgvDoAn.Columns["ImageURL"].Visible = false;
+
             dgvDoAn.EnableHeadersVisualStyles = false;
             dgvDoAn.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
             dgvDoAn.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
@@ -57,7 +61,44 @@ namespace MovieTicketApp
             dgvDoAn.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        // Chọn ảnh
+        private void LoadFoodCategories()
+        {
+            DataTable dt = db.GetFood();
+            cboLoai.Items.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                string category = row["TitleFood"].ToString();
+                if (!cboLoai.Items.Contains(category))
+                {
+                    cboLoai.Items.Add(category);
+                }
+            }
+        }
+
+        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void LoadImageToPictureBox(string path)
+        {
+            try
+            {
+                picAnh.Image?.Dispose();
+                picAnh.Image = Image.FromFile(path);
+                picAnh.SizeMode = PictureBoxSizeMode.StretchImage;
+                selectedImagePath = path;
+            }
+            catch
+            {
+                picAnh.Image = null;
+                selectedImagePath = "";
+            }
+        }
+
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -65,19 +106,18 @@ namespace MovieTicketApp
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 selectedImagePath = ofd.FileName;
-                picAnh.Image = Image.FromFile(selectedImagePath);
+                LoadImageToPictureBox(selectedImagePath);
             }
         }
 
-        // Thêm đồ ăn
         private void btnThem_Click(object sender, EventArgs e)
         {
             string ten = txtTenDoAn.Text.Trim();
             string giaText = txtGia.Text.Trim();
             string loai = cboLoai.SelectedItem?.ToString();
-            string moTa = txtStock.Text.Trim();
+            string stockText = txtStock.Text.Trim();
 
-            if (string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(giaText) || string.IsNullOrEmpty(loai))
+            if (string.IsNullOrWhiteSpace(ten) || string.IsNullOrWhiteSpace(giaText) || string.IsNullOrWhiteSpace(loai))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
                 return;
@@ -89,15 +129,22 @@ namespace MovieTicketApp
                 return;
             }
 
-            string imageFileName = System.IO.Path.GetFileName(selectedImagePath);
+            if (!int.TryParse(stockText, out int stock))
+            {
+                MessageBox.Show("Số lượng tồn phải là số!");
+                return;
+            }
 
-            bool success = db.InsertFood(ten, gia, imageFileName, loai, moTa);
+            string imageFileName = string.IsNullOrEmpty(selectedImagePath) ? "" : Path.GetFileName(selectedImagePath);
+
+            bool success = db.InsertFood(ten, gia, imageFileName, loai, stock);
 
             if (success)
             {
                 MessageBox.Show("Thêm đồ ăn thành công!");
                 ClearForm();
                 LoadFoodData();
+                LoadFoodCategories();
             }
             else
             {
@@ -105,8 +152,114 @@ namespace MovieTicketApp
             }
         }
 
-        // Làm mới form
-        private void ClearForm()
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (selectedFoodId == -1)
+            {
+                MessageBox.Show("Vui lòng chọn món ăn cần sửa!");
+                return;
+            }
+
+            string ten = txtTenDoAn.Text.Trim();
+            string giaText = txtGia.Text.Trim();
+            string loai = cboLoai.SelectedItem?.ToString();
+            string stockText = txtStock.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(ten) || string.IsNullOrWhiteSpace(giaText) || string.IsNullOrWhiteSpace(loai))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+
+            if (!int.TryParse(giaText, out int gia))
+            {
+                MessageBox.Show("Giá phải là số!");
+                return;
+            }
+
+            if (!int.TryParse(stockText, out int stock))
+            {
+                MessageBox.Show("Số lượng tồn phải là số!");
+                return;
+            }
+
+            string imageFileName = string.IsNullOrEmpty(selectedImagePath) ? "" : Path.GetFileName(selectedImagePath);
+
+            bool success = db.UpdateFood(selectedFoodId, ten, gia, imageFileName, loai, stock);
+
+            if (success)
+            {
+                MessageBox.Show("Cập nhật món ăn thành công!");
+                ClearForm();
+                LoadFoodData();
+                LoadFoodCategories();
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thất bại!");
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (selectedFoodId == -1)
+            {
+                MessageBox.Show("Vui lòng chọn món ăn cần xóa!");
+                return;
+            }
+
+            var confirm = MessageBox.Show("Bạn có chắc muốn xóa món ăn này?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
+            {
+                bool success = db.DeleteFood(selectedFoodId);
+                if (success)
+                {
+                    MessageBox.Show("Xóa món ăn thành công!");
+                    ClearForm();
+                    LoadFoodData();
+                    LoadFoodCategories();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại!");
+                }
+            }
+        }
+
+        private void dgvDoAn_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvDoAn.Rows[e.RowIndex];
+                selectedFoodId = Convert.ToInt32(row.Cells["FoodID"].Value);
+
+                txtTenDoAn.Text = row.Cells["Name"].Value.ToString();
+                txtGia.Text = row.Cells["Price"].Value.ToString();
+                txtStock.Text = row.Cells["Stock"].Value.ToString();
+                cboLoai.SelectedItem = row.Cells["TitleFood"].Value.ToString();
+
+                string imageFile = row.Cells["ImageURL"].Value?.ToString();
+                if (!string.IsNullOrEmpty(imageFile))
+                {
+                    string fullPath = Path.Combine(Application.StartupPath, "Images", "Foods", imageFile);
+                    if (File.Exists(fullPath))
+                    {
+                        LoadImageToPictureBox(fullPath);
+                    }
+                    else
+                    {
+                        picAnh.Image = null;
+                        selectedImagePath = "";
+                    }
+                }
+                else
+                {
+                    picAnh.Image = null;
+                    selectedImagePath = "";
+                }
+            }
+        }
+            private void ClearForm()
         {
             txtTenDoAn.Text = "";
             txtGia.Text = "";
@@ -114,17 +267,7 @@ namespace MovieTicketApp
             txtStock.Text = "";
             picAnh.Image = null;
             selectedImagePath = "";
-        }
-
-        // Các nút khác (sửa, xóa) bạn sẽ viết sau
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Chức năng sửa sẽ viết sau.");
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Chức năng xóa sẽ viết sau.");
+            selectedFoodId = -1;
         }
     }
 }

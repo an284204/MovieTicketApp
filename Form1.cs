@@ -15,6 +15,35 @@ namespace MovieTicketApp
         public LoginForm()
         {
             InitializeComponent();
+            LoadLogoImage();
+        }
+
+        private void LoadLogoImage()
+        {
+            try
+            {
+                string[] possiblePaths = {
+                    "Images/Banner/joker.jpg",
+                    "Images/Banner/banner1.jpg",
+                    "Images/Banner/banner2.jpg",
+                    "Images/Banner/banner3.jpg",
+                    "Images/Banner/banner4.jpg",
+                    "Images/Banner/banner5.jpg"
+                };
+
+                foreach (string path in possiblePaths)
+                {
+                    if (System.IO.File.Exists(path))
+                    {
+                        picLogo.Image = Image.FromFile(path);
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thể tải logo: " + ex.Message);
+            }
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -40,6 +69,14 @@ namespace MovieTicketApp
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnOpenRegister_Click(object sender, EventArgs e)
+        {
+            using (var register = new RegisterForm())
+            {
+                register.ShowDialog();
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -73,19 +110,20 @@ namespace MovieTicketApp
             };
 
             this.Hide();
+
             switch (userInfo.RoleId)
             {
                 case 1:
-                    using (var f = new FormMainUser(userInfo)) f.ShowDialog();
+                    new FormMainUser(userInfo).ShowDialog();
                     break;
                 case 2:
-                    using (var f = new FormMainAdmin(userInfo)) f.ShowDialog();
+                    new FormMainAdmin(userInfo).ShowDialog();
                     break;
                 case 3:
-                    using (var f = new Staff(userInfo)) f.ShowDialog();
+                    new Staff(userInfo).ShowDialog();
                     break;
                 case 4:
-                    using (var f = new Boss(userInfo)) f.ShowDialog();
+                    new Boss(userInfo).ShowDialog();
                     break;
                 default:
                     MessageBox.Show("Vai trò không hợp lệ!");
@@ -93,6 +131,14 @@ namespace MovieTicketApp
             }
 
             this.Show();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            using (var forgotPassword = new ForgotPasswordForm())
+            {
+                forgotPassword.ShowDialog();
+            }
         }
     }
 }

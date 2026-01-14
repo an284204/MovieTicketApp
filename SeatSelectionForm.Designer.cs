@@ -1,18 +1,33 @@
 ﻿using Guna.UI2.WinForms;
 using System.Drawing;
 
-
 namespace MovieTicketApp
 {
     partial class SeatSelectionForm
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.Panel panelSeats;
-        private System.Windows.Forms.Panel panelBottom;
-        private System.Windows.Forms.Label lblTotal;
-        private Guna2Button btnConfirm;
-        private Guna2Panel panelLegend;
+        private Guna2Panel panelMain;
+        private Guna2Panel panelScreen;
         private System.Windows.Forms.Label lblScreen;
+        private System.Windows.Forms.Panel panelSeats;
+        private Guna2Panel panelLegend;
+        private Guna2Panel panelBottom;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblSelectedSeats;
+        private Guna2Button btnConfirm;
+        private Guna2Button btnMinimize;
+        private Guna2Button btnClose;
+        private Guna2CircleButton circleBtnAvailable;
+        private Guna2CircleButton circleBtnSelected;
+        private Guna2CircleButton circleBtnBooked;
+        private Guna2CircleButton circleBtnLocked;
+        private Guna2CircleButton circleBtnVIP;
+        private System.Windows.Forms.Label lblLegendAvailable;
+        private System.Windows.Forms.Label lblLegendSelected;
+        private System.Windows.Forms.Label lblLegendBooked;
+        private System.Windows.Forms.Label lblLegendLocked;
+        private System.Windows.Forms.Label lblLegendVIP;
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,278 +37,264 @@ namespace MovieTicketApp
 
         private void InitializeComponent()
         {
+            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.panelScreen = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblScreen = new System.Windows.Forms.Label();
             this.panelSeats = new System.Windows.Forms.Panel();
             this.panelLegend = new Guna.UI2.WinForms.Guna2Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2CircleButton5 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton4 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.lblScreen = new System.Windows.Forms.Label();
-            this.panelBottom = new System.Windows.Forms.Panel();
+            this.panelBottom = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblSelectedSeats = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnConfirm = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.circleBtnAvailable = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.circleBtnSelected = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.circleBtnBooked = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.circleBtnLocked = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.circleBtnVIP = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.lblLegendAvailable = new System.Windows.Forms.Label();
+            this.lblLegendSelected = new System.Windows.Forms.Label();
+            this.lblLegendBooked = new System.Windows.Forms.Label();
+            this.lblLegendLocked = new System.Windows.Forms.Label();
+            this.lblLegendVIP = new System.Windows.Forms.Label();
+            
+            this.panelMain.SuspendLayout();
+            this.panelScreen.SuspendLayout();
             this.panelLegend.SuspendLayout();
             this.panelBottom.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelSeats
-            // 
-            this.panelSeats.BackColor = System.Drawing.Color.RosyBrown;
-            this.panelSeats.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSeats.Location = new System.Drawing.Point(0, 0);
-            this.panelSeats.Name = "panelSeats";
-            this.panelSeats.Size = new System.Drawing.Size(671, 402);
-            this.panelSeats.TabIndex = 0;
-            // 
-            // panelLegend
-            // 
-            this.panelLegend.BackColor = System.Drawing.Color.Transparent;
-            this.panelLegend.Controls.Add(this.label6);
-            this.panelLegend.Controls.Add(this.label5);
-            this.panelLegend.Controls.Add(this.label4);
-            this.panelLegend.Controls.Add(this.label3);
-            this.panelLegend.Controls.Add(this.label2);
-            this.panelLegend.Controls.Add(this.guna2CircleButton5);
-            this.panelLegend.Controls.Add(this.guna2CircleButton4);
-            this.panelLegend.Controls.Add(this.guna2CircleButton3);
-            this.panelLegend.Controls.Add(this.guna2CircleButton2);
-            this.panelLegend.Controls.Add(this.guna2CircleButton1);
-            this.panelLegend.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelLegend.Location = new System.Drawing.Point(671, 0);
-            this.panelLegend.Name = "panelLegend";
-            this.panelLegend.Size = new System.Drawing.Size(229, 460);
-            this.panelLegend.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(66, 321);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 29);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Ghế đôi";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(66, 266);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 29);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Ghế đã đặt";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(66, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(173, 29);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Ghế tạm khóa";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(66, 145);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 29);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Ghế đang chọn";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(69, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 29);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Ghế có thể chọn";
-            // 
-            // guna2CircleButton5
-            // 
-            this.guna2CircleButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2CircleButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton5.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton5.Location = new System.Drawing.Point(13, 144);
-            this.guna2CircleButton5.Name = "guna2CircleButton5";
-            this.guna2CircleButton5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton5.Size = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton5.TabIndex = 5;
-            // 
-            // guna2CircleButton4
-            // 
-            this.guna2CircleButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton4.FillColor = System.Drawing.Color.Red;
-            this.guna2CircleButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton4.Location = new System.Drawing.Point(13, 204);
-            this.guna2CircleButton4.Name = "guna2CircleButton4";
-            this.guna2CircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton4.Size = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton4.TabIndex = 4;
-            // 
-            // guna2CircleButton3
-            // 
-            this.guna2CircleButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton3.FillColor = System.Drawing.Color.Gray;
-            this.guna2CircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton3.Location = new System.Drawing.Point(13, 265);
-            this.guna2CircleButton3.Name = "guna2CircleButton3";
-            this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton3.Size = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton3.TabIndex = 3;
-            // 
-            // guna2CircleButton2
-            // 
-            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(13, 320);
-            this.guna2CircleButton2.Name = "guna2CircleButton2";
-            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton2.TabIndex = 2;
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Lime;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(13, 83);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton1.TabIndex = 1;
-            // 
-            // lblScreen
-            // 
-            this.lblScreen.BackColor = System.Drawing.Color.LightGray;
+            
+            // panelMain - Main container (dark background)
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.panelMain.Controls.Add(this.panelBottom);
+            this.panelMain.Controls.Add(this.panelSeats);
+            this.panelMain.Controls.Add(this.panelLegend);
+            this.panelMain.Controls.Add(this.panelScreen);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1100, 680);
+            this.panelMain.TabIndex = 0;
+            
+            // panelScreen - Curved screen display at top - DOCK TOP
+            this.panelScreen.BackColor = System.Drawing.Color.Transparent;
+            this.panelScreen.BorderRadius = 30;
+            this.panelScreen.Controls.Add(this.btnClose);
+            this.panelScreen.Controls.Add(this.btnMinimize);
+            this.panelScreen.Controls.Add(this.lblScreen);
+            this.panelScreen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelScreen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
+            this.panelScreen.Name = "panelScreen";
+            this.panelScreen.Padding = new System.Windows.Forms.Padding(20, 10, 20, 20);
+            this.panelScreen.ShadowDecoration.Color = System.Drawing.Color.Black;
+            this.panelScreen.ShadowDecoration.Depth = 8;
+            this.panelScreen.ShadowDecoration.Enabled = true;
+            this.panelScreen.Size = new System.Drawing.Size(1100, 70);
+            this.panelScreen.TabIndex = 0;
+            
+            // lblScreen - Screen label with emoji
+            this.lblScreen.BackColor = System.Drawing.Color.Transparent;
             this.lblScreen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblScreen.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblScreen.Location = new System.Drawing.Point(0, 0);
+            this.lblScreen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblScreen.ForeColor = System.Drawing.Color.White;
+            this.lblScreen.Location = new System.Drawing.Point(20, 10);
             this.lblScreen.Name = "lblScreen";
-            this.lblScreen.Size = new System.Drawing.Size(671, 58);
-            this.lblScreen.TabIndex = 1;
-            this.lblScreen.Text = "SCREEN";
+            this.lblScreen.Size = new System.Drawing.Size(960, 50);
+            this.lblScreen.TabIndex = 0;
+            this.lblScreen.Text = "📽️  SCREEN";
             this.lblScreen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelBottom
-            // 
-            this.panelBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panelBottom.Controls.Add(this.lblTotal);
+            
+            // panelSeats - Main seating area (left + center) - NO DOCK, FIXED SIZE
+            this.panelSeats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(35)))));
+            this.panelSeats.Location = new System.Drawing.Point(0, 70);
+            this.panelSeats.Name = "panelSeats";
+            this.panelSeats.Padding = new System.Windows.Forms.Padding(20);
+            this.panelSeats.Size = new System.Drawing.Size(800, 480);
+            this.panelSeats.TabIndex = 1;
+            this.panelSeats.AutoScroll = true;
+            
+            // panelLegend - Legend panel (right side, compact) - NO DOCK, FIXED SIZE
+            this.panelLegend.BackColor = System.Drawing.Color.Transparent;
+            this.panelLegend.BorderRadius = 16;
+            this.panelLegend.Controls.Add(this.lblLegendVIP);
+            this.panelLegend.Controls.Add(this.circleBtnVIP);
+            this.panelLegend.Controls.Add(this.lblLegendLocked);
+            this.panelLegend.Controls.Add(this.circleBtnLocked);
+            this.panelLegend.Controls.Add(this.lblLegendBooked);
+            this.panelLegend.Controls.Add(this.circleBtnBooked);
+            this.panelLegend.Controls.Add(this.lblLegendSelected);
+            this.panelLegend.Controls.Add(this.circleBtnSelected);
+            this.panelLegend.Controls.Add(this.lblLegendAvailable);
+            this.panelLegend.Controls.Add(this.circleBtnAvailable);
+            this.panelLegend.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
+            this.panelLegend.Location = new System.Drawing.Point(800, 70);
+            this.panelLegend.Name = "panelLegend";
+            this.panelLegend.Padding = new System.Windows.Forms.Padding(12);
+            this.panelLegend.ShadowDecoration.Color = System.Drawing.Color.Black;
+            this.panelLegend.ShadowDecoration.Depth = 8;
+            this.panelLegend.ShadowDecoration.Enabled = true;
+            this.panelLegend.Size = new System.Drawing.Size(300, 480);
+            this.panelLegend.TabIndex = 2;
+            
+            // Legend: Available (Green)
+            this.circleBtnAvailable.FillColor = System.Drawing.Color.LimeGreen;
+            this.circleBtnAvailable.Location = new System.Drawing.Point(16, 20);
+            this.circleBtnAvailable.Size = new System.Drawing.Size(18, 18);
+            this.circleBtnAvailable.TabIndex = 0;
+            this.lblLegendAvailable.AutoSize = true;
+            this.lblLegendAvailable.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblLegendAvailable.ForeColor = System.Drawing.Color.White;
+            this.lblLegendAvailable.Location = new System.Drawing.Point(42, 20);
+            this.lblLegendAvailable.Text = "Ghế còn trống";
+            
+            // Legend: Selected (Orange)
+            this.circleBtnSelected.FillColor = System.Drawing.Color.Orange;
+            this.circleBtnSelected.Location = new System.Drawing.Point(16, 55);
+            this.circleBtnSelected.Size = new System.Drawing.Size(18, 18);
+            this.circleBtnSelected.TabIndex = 1;
+            this.lblLegendSelected.AutoSize = true;
+            this.lblLegendSelected.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblLegendSelected.ForeColor = System.Drawing.Color.White;
+            this.lblLegendSelected.Location = new System.Drawing.Point(42, 55);
+            this.lblLegendSelected.Text = "Đang chọn";
+            
+            // Legend: Booked (Gray)
+            this.circleBtnBooked.FillColor = System.Drawing.Color.Gray;
+            this.circleBtnBooked.Location = new System.Drawing.Point(16, 90);
+            this.circleBtnBooked.Size = new System.Drawing.Size(18, 18);
+            this.circleBtnBooked.TabIndex = 2;
+            this.lblLegendBooked.AutoSize = true;
+            this.lblLegendBooked.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblLegendBooked.ForeColor = System.Drawing.Color.White;
+            this.lblLegendBooked.Location = new System.Drawing.Point(42, 90);
+            this.lblLegendBooked.Text = "Đã đặt";
+            
+            // Legend: Locked (Red)
+            this.circleBtnLocked.FillColor = System.Drawing.Color.Red;
+            this.circleBtnLocked.Location = new System.Drawing.Point(16, 125);
+            this.circleBtnLocked.Size = new System.Drawing.Size(18, 18);
+            this.circleBtnLocked.TabIndex = 3;
+            this.lblLegendLocked.AutoSize = true;
+            this.lblLegendLocked.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblLegendLocked.ForeColor = System.Drawing.Color.White;
+            this.lblLegendLocked.Location = new System.Drawing.Point(42, 125);
+            this.lblLegendLocked.Text = "Tạm khóa";
+            
+            // Legend: VIP (Purple)
+            this.circleBtnVIP.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(80)))), ((int)(((byte)(180)))));
+            this.circleBtnVIP.Location = new System.Drawing.Point(16, 160);
+            this.circleBtnVIP.Size = new System.Drawing.Size(18, 18);
+            this.circleBtnVIP.TabIndex = 4;
+            this.lblLegendVIP.AutoSize = true;
+            this.lblLegendVIP.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblLegendVIP.ForeColor = System.Drawing.Color.White;
+            this.lblLegendVIP.Location = new System.Drawing.Point(42, 160);
+            this.lblLegendVIP.Text = "Ghế VIP/Đôi";
+            
+            // panelBottom - Info and payment bar - DOCK BOTTOM
+            this.panelBottom.BackColor = System.Drawing.Color.Transparent;
+            this.panelBottom.BorderRadius = 16;
             this.panelBottom.Controls.Add(this.btnConfirm);
+            this.panelBottom.Controls.Add(this.lblTotal);
+            this.panelBottom.Controls.Add(this.lblSelectedSeats);
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 460);
+            this.panelBottom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(900, 80);
-            this.panelBottom.TabIndex = 2;
-            // 
+            this.panelBottom.Padding = new System.Windows.Forms.Padding(15);
+            this.panelBottom.ShadowDecoration.Color = System.Drawing.Color.Black;
+            this.panelBottom.ShadowDecoration.Depth = 8;
+            this.panelBottom.ShadowDecoration.Enabled = true;
+            this.panelBottom.Size = new System.Drawing.Size(1100, 130);
+            this.panelBottom.TabIndex = 3;
+            
+            // btnMinimize - Minimize button (top left)
+            this.btnMinimize.BorderRadius = 8;
+            this.btnMinimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMinimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMinimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.btnMinimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
+            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(120)))));
+            this.btnMinimize.Location = new System.Drawing.Point(20, 15);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(35, 35);
+            this.btnMinimize.TabIndex = 0;
+            this.btnMinimize.Text = "−";
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            
+            // btnClose - Close button (top left, next to minimize)
+            this.btnClose.BorderRadius = 8;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnClose.Location = new System.Drawing.Point(60, 15);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(35, 35);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "✕";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            
+            // lblSelectedSeats
+            this.lblSelectedSeats.AutoSize = true;
+            this.lblSelectedSeats.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblSelectedSeats.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblSelectedSeats.Location = new System.Drawing.Point(15, 15);
+            this.lblSelectedSeats.Name = "lblSelectedSeats";
+            this.lblSelectedSeats.Text = "Ghế đã chọn: Không có";
+            
             // lblTotal
-            // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblTotal.Location = new System.Drawing.Point(10, 15);
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(15, 40);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(108, 32);
-            this.lblTotal.TabIndex = 0;
             this.lblTotal.Text = "Tổng: 0đ";
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.BorderRadius = 10;
-            this.btnConfirm.FillColor = System.Drawing.Color.SteelBlue;
-            this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 11F);
+            
+            // btnConfirm - Payment button (Red accent)
+            this.btnConfirm.BorderRadius = 12;
+            this.btnConfirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.btnConfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(9)))), ((int)(((byte)(20)))));
+            this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(720, 15);
+            this.btnConfirm.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(20)))), ((int)(((byte)(30)))));
+            this.btnConfirm.Location = new System.Drawing.Point(720, 35);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(140, 45);
-            this.btnConfirm.TabIndex = 1;
+            this.btnConfirm.Size = new System.Drawing.Size(165, 40);
+            this.btnConfirm.TabIndex = 2;
             this.btnConfirm.Text = "Thanh toán";
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.lblScreen);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(671, 58);
-            this.guna2Panel1.TabIndex = 3;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Controls.Add(this.panelSeats);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 58);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(671, 402);
-            this.guna2Panel2.TabIndex = 4;
-            // 
+            
             // SeatSelectionForm
-            // 
-            this.ClientSize = new System.Drawing.Size(900, 540);
-            this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.panelLegend);
-            this.Controls.Add(this.panelBottom);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.ClientSize = new System.Drawing.Size(1100, 680);
+            this.Controls.Add(this.panelMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SeatSelectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chọn ghế";
             this.Load += new System.EventHandler(this.SeatSelectionForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SeatSelectionForm_FormClosing);
+            
+            this.panelMain.ResumeLayout(false);
+            this.panelScreen.ResumeLayout(false);
             this.panelLegend.ResumeLayout(false);
             this.panelLegend.PerformLayout();
             this.panelBottom.ResumeLayout(false);
             this.panelBottom.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
-        private Guna2CircleButton guna2CircleButton5;
-        private Guna2CircleButton guna2CircleButton4;
-        private Guna2CircleButton guna2CircleButton3;
-        private Guna2CircleButton guna2CircleButton2;
-        private Guna2CircleButton guna2CircleButton1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private Guna2Panel guna2Panel1;
-        private Guna2Panel guna2Panel2;
     }
 }

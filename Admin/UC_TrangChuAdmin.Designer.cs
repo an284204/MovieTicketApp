@@ -8,6 +8,7 @@ namespace MovieTicketApp
 
         private Guna.UI2.WinForms.Guna2Panel panelTop;
         private Label lblWelcome;
+        private Label lblSubtitle;
         private Guna.UI2.WinForms.Guna2Panel panelMain;
         private Label lblTitle;
         private Guna.UI2.WinForms.Guna2Button btnSaveAll;
@@ -26,6 +27,7 @@ namespace MovieTicketApp
         {
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
             this.lblWelcome = new Label();
+            this.lblSubtitle = new Label();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitle = new Label();
             this.btnSaveAll = new Guna.UI2.WinForms.Guna2Button();
@@ -50,54 +52,68 @@ namespace MovieTicketApp
 
             this.panelTop.SuspendLayout();
             this.panelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb5)).BeginInit();
             this.SuspendLayout();
 
-            // panelTop
+            // panelTop - Header with gradient effect
             this.panelTop.Dock = DockStyle.Top;
-            this.panelTop.Height = 80;
-            this.panelTop.FillColor = System.Drawing.Color.FromArgb(30, 136, 229);
+            this.panelTop.Height = 100;
+            this.panelTop.FillColor = System.Drawing.Color.White;
+            this.panelTop.BorderRadius = 0;
+            this.panelTop.ShadowDecoration.Enabled = true;
+            this.panelTop.ShadowDecoration.Depth = 20;
+            this.panelTop.ShadowDecoration.Color = System.Drawing.Color.FromArgb(30, 0, 0, 0);
+            this.panelTop.Controls.Add(this.lblSubtitle);
             this.panelTop.Controls.Add(this.lblWelcome);
 
-            // lblWelcome
-            this.lblWelcome.Text = "Xin chào, Quản lý 👋";
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.lblWelcome.ForeColor = System.Drawing.Color.White;
+            // lblWelcome - Main title
+            this.lblWelcome.Text = "Quản Lý Banner Trang Chủ";
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(30, 35, 48);
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Location = new System.Drawing.Point(20, 20);
+            this.lblWelcome.Location = new System.Drawing.Point(30, 22);
+
+            // lblSubtitle - Subtitle
+            this.lblSubtitle.Text = "Thiết lập hình ảnh quảng cáo hiển thị trên màn hình chính của ứng dụng";
+            this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(120, 130, 140);
+            this.lblSubtitle.AutoSize = true;
+            this.lblSubtitle.Location = new System.Drawing.Point(32, 62);
 
             // panelMain
             this.panelMain.Dock = DockStyle.Fill;
-            this.panelMain.Padding = new Padding(20);
+            this.panelMain.Padding = new Padding(25);
             this.panelMain.AutoScroll = true;
+            this.panelMain.FillColor = System.Drawing.Color.FromArgb(240, 242, 245);
             this.panelMain.Controls.Add(this.lblTitle);
-
-            // lblTitle
-            this.lblTitle.Text = "Quản lý Banner Trang Chủ (5 ảnh)";
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(20, 10);
-            this.lblTitle.AutoSize = true;
-
-            // btnSaveAll
-            this.btnSaveAll.Text = " Lưu tất cả";
-            this.btnSaveAll.FillColor = System.Drawing.Color.SeaGreen;
-            this.btnSaveAll.ForeColor = System.Drawing.Color.White;
-            this.btnSaveAll.Size = new System.Drawing.Size(200, 50);
-            this.btnSaveAll.BorderRadius = 8;
-            this.btnSaveAll.Location = new System.Drawing.Point(20, 910);
-            // gắn event handler ở file .cs bằng BtnSaveAll_Click
-            // this.btnSaveAll.Click += new System.EventHandler(this.BtnSaveAll_Click);
-
-            // Khởi tạo các panel banner (vị trí sẽ set trong CreateBannerUI ở file .cs)
             this.panelMain.Controls.Add(this.btnSaveAll);
 
+            // lblTitle - hidden, not needed anymore
+            this.lblTitle.Text = "";
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(100, 100, 120);
+            this.lblTitle.Location = new System.Drawing.Point(25, 5);
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Visible = false;
+
+            // btnSaveAll
+            this.btnSaveAll.Text = "Luu tat ca";
+            this.btnSaveAll.FillColor = System.Drawing.Color.FromArgb(40, 167, 69);
+            this.btnSaveAll.ForeColor = System.Drawing.Color.White;
+            this.btnSaveAll.Size = new System.Drawing.Size(200, 50);
+            this.btnSaveAll.BorderRadius = 12;
+            this.btnSaveAll.Font = new System.Drawing.Font("Segoe UI Semibold", 12F);
+            this.btnSaveAll.Location = new System.Drawing.Point(25, 870);
+            this.btnSaveAll.ShadowDecoration.Enabled = true;
+            this.btnSaveAll.ShadowDecoration.Depth = 10;
+            this.btnSaveAll.ShadowDecoration.Color = System.Drawing.Color.FromArgb(50, 40, 167, 69);
+            this.btnSaveAll.HoverState.FillColor = System.Drawing.Color.FromArgb(50, 190, 85);
+            this.btnSaveAll.Animated = true;
+
+            // Form/UserControl
+            this.BackColor = System.Drawing.Color.FromArgb(240, 242, 245);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelTop);
-            this.Size = new System.Drawing.Size(900, 900);
+            this.Size = new System.Drawing.Size(1050, 745);
 
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();

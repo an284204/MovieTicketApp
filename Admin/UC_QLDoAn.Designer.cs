@@ -39,13 +39,13 @@ namespace MovieTicketApp
             // lblTitle
             // 
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(35)))), ((int)(((byte)(48)))));
             this.lblTitle.Location = new System.Drawing.Point(30, 20);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(608, 56);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "QUẢN LÝ ĐỒ ĂN / NƯỚC UỐNG";
+            this.lblTitle.Text = "Quản Lý Đồ Ăn / Nước Uống";
             // 
             // panelMain
             // 
@@ -107,56 +107,56 @@ namespace MovieTicketApp
             // btnXoa
             // 
             this.btnXoa.BorderRadius = 10;
-            this.btnXoa.FillColor = System.Drawing.Color.Crimson;
-            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Location = new System.Drawing.Point(80, 450);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(100, 38);
+            this.btnXoa.Size = new System.Drawing.Size(100, 40);
             this.btnXoa.TabIndex = 0;
-            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Text = "🗑️ Xóa";
             this.btnXoa.UseTransparentBackground = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
             this.btnSua.BorderRadius = 10;
-            this.btnSua.FillColor = System.Drawing.Color.Goldenrod;
-            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.btnSua.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Location = new System.Drawing.Point(130, 400);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(100, 38);
+            this.btnSua.Size = new System.Drawing.Size(100, 40);
             this.btnSua.TabIndex = 1;
-            this.btnSua.Text = "Sửa";
+            this.btnSua.Text = "✏️ Sửa";
             this.btnSua.UseTransparentBackground = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
             this.btnThem.BorderRadius = 10;
-            this.btnThem.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Location = new System.Drawing.Point(25, 400);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 38);
+            this.btnThem.Size = new System.Drawing.Size(100, 40);
             this.btnThem.TabIndex = 2;
-            this.btnThem.Text = "Thêm";
+            this.btnThem.Text = "➕ Thêm";
             this.btnThem.UseTransparentBackground = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnChonAnh
             // 
             this.btnChonAnh.BorderRadius = 10;
-            this.btnChonAnh.FillColor = System.Drawing.Color.SteelBlue;
-            this.btnChonAnh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnChonAnh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(90)))), ((int)(((byte)(140)))));
+            this.btnChonAnh.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.btnChonAnh.ForeColor = System.Drawing.Color.White;
             this.btnChonAnh.Location = new System.Drawing.Point(50, 150);
             this.btnChonAnh.Name = "btnChonAnh";
-            this.btnChonAnh.Size = new System.Drawing.Size(150, 35);
+            this.btnChonAnh.Size = new System.Drawing.Size(150, 38);
             this.btnChonAnh.TabIndex = 1;
-            this.btnChonAnh.Text = "Chọn ảnh";
+            this.btnChonAnh.Text = "📁 Chọn ảnh";
             this.btnChonAnh.UseTransparentBackground = true;
             this.btnChonAnh.Click += new System.EventHandler(this.btnChonAnh_Click);
             // 
@@ -233,7 +233,7 @@ namespace MovieTicketApp
             // UC_QLDoAn
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(215)))), ((int)(((byte)(235)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelRight);

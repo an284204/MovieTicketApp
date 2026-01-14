@@ -29,17 +29,18 @@
             // panelItem
             // 
             this.panelItem.BackColor = System.Drawing.Color.Transparent;
-            this.panelItem.BorderColor = System.Drawing.Color.Black;
-            this.panelItem.BorderRadius = 12;
-            this.panelItem.BorderThickness = 2;
+            this.panelItem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.panelItem.BorderRadius = 16;
+            this.panelItem.BorderThickness = 0;
             this.panelItem.Controls.Add(this.lblThoiLuong);
             this.panelItem.Controls.Add(this.lblTenPhim);
             this.panelItem.Controls.Add(this.btnDatVe);
             this.panelItem.Controls.Add(this.picPoster);
-            this.panelItem.FillColor = System.Drawing.Color.White;
+            this.panelItem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.panelItem.Location = new System.Drawing.Point(0, 0);
             this.panelItem.Name = "panelItem";
-            this.panelItem.ShadowDecoration.Depth = 10;
+            this.panelItem.ShadowDecoration.Depth = 20;
+            this.panelItem.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 8, 8);
             this.panelItem.Size = new System.Drawing.Size(200, 300);
             this.panelItem.TabIndex = 0;
             this.panelItem.Paint += new System.Windows.Forms.PaintEventHandler(this.panelItem_Paint);
@@ -47,9 +48,9 @@
             // lblThoiLuong
             // 
             this.lblThoiLuong.BackColor = System.Drawing.Color.Transparent;
-            this.lblThoiLuong.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblThoiLuong.ForeColor = System.Drawing.Color.Black;
-            this.lblThoiLuong.Location = new System.Drawing.Point(50, 220);
+            this.lblThoiLuong.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblThoiLuong.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblThoiLuong.Location = new System.Drawing.Point(50, 235);
             this.lblThoiLuong.Name = "lblThoiLuong";
             this.lblThoiLuong.Size = new System.Drawing.Size(114, 30);
             this.lblThoiLuong.TabIndex = 2;
@@ -61,11 +62,11 @@
             this.lblTenPhim.AutoSize = false;
             this.lblTenPhim.BackColor = System.Drawing.Color.Transparent;
             this.lblTenPhim.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblTenPhim.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblTenPhim.Location = new System.Drawing.Point(15, 170);
-            this.lblTenPhim.MaximumSize = new System.Drawing.Size(170, 35);
+            this.lblTenPhim.ForeColor = System.Drawing.Color.White;
+            this.lblTenPhim.Location = new System.Drawing.Point(15, 185);
+            this.lblTenPhim.MaximumSize = new System.Drawing.Size(170, 40);
             this.lblTenPhim.Name = "lblTenPhim";
-            this.lblTenPhim.Size = new System.Drawing.Size(170, 35);
+            this.lblTenPhim.Size = new System.Drawing.Size(170, 40);
             this.lblTenPhim.TabIndex = 1;
             this.lblTenPhim.Text = "Tên phim";
             this.lblTenPhim.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -73,26 +74,26 @@
             // 
             // btnDatVe
             // 
-            this.btnDatVe.BorderRadius = 10;
-            this.btnDatVe.FillColor = System.Drawing.Color.DarkOrange;
+            this.btnDatVe.BorderRadius = 12;
+            this.btnDatVe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(9)))), ((int)(((byte)(20)))));
             this.btnDatVe.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnDatVe.ForeColor = System.Drawing.Color.Black;
-            this.btnDatVe.Location = new System.Drawing.Point(40, 250);
+            this.btnDatVe.ForeColor = System.Drawing.Color.White;
+            this.btnDatVe.Location = new System.Drawing.Point(30, 265);
             this.btnDatVe.Name = "btnDatVe";
-            this.btnDatVe.Size = new System.Drawing.Size(120, 30);
+            this.btnDatVe.Size = new System.Drawing.Size(140, 28);
             this.btnDatVe.TabIndex = 3;
             this.btnDatVe.Text = "Đặt vé";
             this.btnDatVe.Click += new System.EventHandler(this.btnDatVe_Click);
             // 
             // picPoster
             // 
-            this.picPoster.BorderRadius = 12;
-            this.picPoster.FillColor = System.Drawing.Color.LightGray;
+            this.picPoster.BorderRadius = 14;
+            this.picPoster.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(80)))));
             this.picPoster.ImageRotate = 0F;
-            this.picPoster.Location = new System.Drawing.Point(15, 15);
+            this.picPoster.Location = new System.Drawing.Point(15, 12);
             this.picPoster.Name = "picPoster";
-            this.picPoster.Size = new System.Drawing.Size(170, 150);
-            this.picPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPoster.Size = new System.Drawing.Size(170, 165);
+            this.picPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPoster.TabIndex = 0;
             this.picPoster.TabStop = false;
             this.picPoster.Click += new System.EventHandler(this.picPoster_Click);

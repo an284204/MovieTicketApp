@@ -15,6 +15,7 @@ namespace MovieTicketApp
         public UC_ItemDoAn()
         {
             InitializeComponent();
+            SetupHoverEffects();
         }
 
         public void SetData(string tenMon, string gia, Image hinh = null)
@@ -24,7 +25,7 @@ namespace MovieTicketApp
             if (hinh != null)
                 picMon.Image = hinh;
             else
-                picMon.FillColor = Color.LightGray;
+                picMon.FillColor = Color.FromArgb(60, 60, 80);
         }
 
         private void UC_ItemDoAn_Load(object sender, EventArgs e)
@@ -36,6 +37,20 @@ namespace MovieTicketApp
         private void btnThem_Click(object sender, EventArgs e)
         {
             OnThemMon?.Invoke(this, (lblTenMon.Text, lblGia.Text));
+        }
+
+        private void SetupHoverEffects()
+        {
+            panelItem.MouseEnter += (s, e) =>
+            {
+                panelItem.FillColor = Color.FromArgb(40, 40, 60);
+                panelItem.ShadowDecoration.Depth = 30;
+            };
+            panelItem.MouseLeave += (s, e) =>
+            {
+                panelItem.FillColor = Color.FromArgb(30, 30, 45);
+                panelItem.ShadowDecoration.Depth = 20;
+            };
         }
     }
 }
